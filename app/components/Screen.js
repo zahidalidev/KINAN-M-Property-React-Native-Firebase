@@ -1,5 +1,6 @@
 import React from "react";
 import { Platform, SafeAreaView, StyleSheet, StatusBar } from "react-native";
+//config
 import Colors from "../config/Colors";
 
 function Screen({ children, statusBarColor = Colors.primary, style }) {

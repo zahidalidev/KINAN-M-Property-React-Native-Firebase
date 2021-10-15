@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ImageBackground, Image, Text, TouchableOpacity } from 'react-native';
+import { View, ImageBackground, Image, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 
 //components
@@ -9,7 +9,7 @@ function WelcomeScreen(props) {
     return (
         <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center' }}>
             {/* background image */}
-            <ImageBackground style={{ alignItems: 'center', justifyContent: 'flex-start', width: '100%', height: '100%' }} source={require('../../assets/images/welcome.png')}>
+            <ImageBackground style={styles.imageContainer} source={require('../../assets/images/welcome.png')}>
                 {/* Logo */}
                 <Image style={{ width: RFPercentage(35), height: RFPercentage(35) }} source={require('../../assets/images/logo.png')} />
                 {/* Title */}
@@ -23,5 +23,14 @@ function WelcomeScreen(props) {
         </Screen>
     );
 }
+
+const styles = StyleSheet.create({
+    imageContainer: {
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        width: '100%',
+        height: '100%'
+    },
+})
 
 export default WelcomeScreen;
