@@ -11,23 +11,17 @@ import MyAppButton from './../components/common/MyAppButton';
 //config
 import Colors from '../config/Colors';
 
-function LoginScreen(props) {
-
-    const buttons = [
-        {
-            title: 'Next',
-            backgroundColor: Colors.white,
-        },
-        {
-            title: 'Already have an account?',
-            backgroundColor: Colors.lightPink
-        },
-    ]
+function LoginScreen2(props) {
 
     const [inputField, SetInputField] = useState([
         {
             placeholder: "Enter your email",
             value: "",
+        },
+        {
+            placeholder: "Password",
+            value: "",
+            secure: true
         },
     ]);
 
@@ -43,11 +37,11 @@ function LoginScreen(props) {
             {/* Mini Container till bottom image */}
             <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginLeft: RFPercentage(5), marginTop: RFPercentage(2) }}>
                 {/* Back Icon */}
-                <TouchableOpacity onPress={() => props.navigation.navigate("WelcomeScreen")}>
+                <TouchableOpacity onPress={() => props.navigation.navigate("SignupScreen")}>
                     <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(4.5) }} color={Colors.black} />
                 </TouchableOpacity>
                 <Text style={{ fontSize: RFPercentage(4.3), fontWeight: 'bold', marginTop: RFPercentage(2) }}>
-                    Signup
+                    Login
                 </Text>
                 <Text style={{ color: Colors.lightGrey, fontSize: RFPercentage(2.1), marginTop: RFPercentage(1.3) }}>
                     Let’s explore your dream house
@@ -56,11 +50,12 @@ function LoginScreen(props) {
                 <View style={{ marginTop: RFPercentage(2), justifyContent: 'center', alignItems: 'center', width: '100%' }}>
                     {/* Input Fields */}
                     {inputField.map((item, i) => (
-                        <View key={i} style={{ marginTop: RFPercentage(2) }} >
+                        <View key={i} >
                             <InputField
                                 placeholder={item.placeholder}
                                 backgroundColor={Colors.white}
                                 borderColor={"#E3E5E5"}
+                                secure={item.secure}
                                 borderRadius={RFPercentage(1)}
                                 fontSize={RFPercentage(2)}
                                 handleFeild={(text) => handleChange(text, i)}
@@ -70,9 +65,6 @@ function LoginScreen(props) {
                         </View>
                     ))}
                 </View>
-                <Text style={{ color: '#7A7E80', fontSize: RFPercentage(1.8), marginTop: RFPercentage(2) }}>
-                    You will receive a confirmation Email click to verify.
-                </Text>
             </View>
 
             {/* Bottom Image */}
@@ -80,19 +72,15 @@ function LoginScreen(props) {
                 <Image style={{ opacity: 0.7, borderTopLeftRadius: RFPercentage(5), borderTopRightRadius: RFPercentage(5), position: 'absolute', bottom: 0, width: '100%', height: RFPercentage(55) }} source={require('../../assets/images/bottom.png')} />
                 {/* Botom Buttons */}
                 <View style={{ width: "100%", position: 'absolute', bottom: RFPercentage(10) }}>
-                    {buttons.map((item, i) => (
-                        <View key={i} style={{ marginTop: RFPercentage(2.5) }}>
-                            <MyAppButton
-                                title={item.title}
-                                padding={RFPercentage(1.8)}
-                                bold={true}
-                                onPress={() => i === 0 ? props.navigation.navigate("SignupScreen") : null}
-                                backgroundColor={item.backgroundColor}
-                                color={Colors.black}
-                                width={"85%"}
-                            />
-                        </View>
-                    ))}
+                    <MyAppButton
+                        title="Login"
+                        padding={RFPercentage(1.8)}
+                        bold={true}
+                        // onPress={() => handleLogin()}
+                        backgroundColor={Colors.white}
+                        color={Colors.black}
+                        width={"85%"}
+                    />
                 </View>
             </View>
 
@@ -100,4 +88,4 @@ function LoginScreen(props) {
     );
 }
 
-export default LoginScreen;
+export default LoginScreen2;

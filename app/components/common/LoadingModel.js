@@ -34,7 +34,7 @@ function LoadingModal({ show }) {
                         alignItems: "center",
                     }}
                 >
-                    <ActivityIndicator size={RFPercentage(5)} color={Colors.primary} />
+                    <ActivityIndicator size={RFPercentage(5)} color={Colors.black} />
                 </View>
             </View>
         </Modal>
