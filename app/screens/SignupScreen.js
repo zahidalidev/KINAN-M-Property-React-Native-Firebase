@@ -54,6 +54,7 @@ function SignupScreen(props) {
                             <InputField
                                 placeholder={item.placeholder}
                                 backgroundColor={Colors.white}
+                                borderWidth={0.3}
                                 borderColor={"#E3E5E5"}
                                 secure={item.secure}
                                 borderRadius={RFPercentage(1)}

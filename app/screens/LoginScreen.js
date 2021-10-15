@@ -60,6 +60,7 @@ function LoginScreen(props) {
                             <InputField
                                 placeholder={item.placeholder}
                                 backgroundColor={Colors.white}
+                                borderWidth={0.3}
                                 borderColor={"#E3E5E5"}
                                 borderRadius={RFPercentage(1)}
                                 fontSize={RFPercentage(2)}

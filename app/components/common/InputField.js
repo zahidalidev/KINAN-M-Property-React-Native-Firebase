@@ -15,8 +15,8 @@ function InputField({
     onTouchEnd = () => { },
     placeholder,
     handleFeild,
-    borderColor = Colors.inputFieldBorder,
-    borderWidth = RFPercentage(0.3),
+    borderColor = Colors.white,
+    borderWidth = RFPercentage(0),
     fontFamily = null,
     placeholderColor = "#B4B6B8",
     borderRadius = RFPercentage(1),
@@ -43,9 +43,8 @@ function InputField({
         <View style={{ alignItems: "center", justifyContent: "center", flexDirection: "row", backgroundColor: backgroundColor, borderColor: borderColor, borderWidth: borderWidth, width: width, height: height, borderRadius: borderRadius, marginVertical: RFPercentage(0.7), }} >
             {leftIconName ? (
                 <TouchableOpacity onPress={() => handleFeild('')} style={{ position: "absolute", right: RFPercentage(1), }}>
-
                     <Feather
-                        color="orange"
+                        color={Colors.lightGrey}
                         size={RFPercentage(2.5)}
                         style={{ right: RFPercentage(1) }}
                         name={leftIconName}
