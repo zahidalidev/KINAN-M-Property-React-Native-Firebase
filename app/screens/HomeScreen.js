@@ -151,7 +151,7 @@ function HomeScreen(props) {
                 </View>
             </ScrollView>
             {/* Bottom tab */}
-            <BottomTab />
+            <BottomTab props={props} />
         </Screen>
     );
 }

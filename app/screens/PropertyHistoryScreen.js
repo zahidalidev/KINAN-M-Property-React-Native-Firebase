@@ -8,7 +8,7 @@ import Screen from './../components/Screen';
 // config
 import Colors from './../config/Colors';
 
-function HomeHistoryScreen(props) {
+function PropertyHistoryScreen(props) {
 
     const cartData = [
         {
@@ -61,11 +61,11 @@ function HomeHistoryScreen(props) {
             {/* Nav bar with heading */}
             <View style={{ marginTop: RFPercentage(3.5), width: '90%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                 {/* Back Icon */}
-                <TouchableOpacity onPress={() => props.navigation.navigate("PropertyHistoryScreen")} style={{ position: 'absolute', left: RFPercentage(1) }} >
+                <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(1) }} >
                     <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(4.5) }} color={Colors.black} />
                 </TouchableOpacity>
                 <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(3.3), color: Colors.black }}>
-                    Home History
+                    Property History
                 </Text>
             </View>
 
@@ -104,4 +104,4 @@ function HomeHistoryScreen(props) {
     );
 }
 
-export default HomeHistoryScreen;
+export default PropertyHistoryScreen;

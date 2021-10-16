@@ -13,8 +13,9 @@ import LoginScreen2 from './app/screens/LoginScreen2';
 import HomeScreen from './app/screens/HomeScreen';
 import AccountScreen from './app/screens/AccountScreen';
 import HomeHistoryScreen from './app/screens/HomeHistoryScreen';
+import PropertyHistoryScreen from './app/screens/PropertyHistoryScreen';
 
-//customfonts
+//custom fonts
 import { Inter_700Bold, Inter_500Medium, Inter_400Regular, useFonts } from "@expo-google-fonts/inter"
 import { Montserrat_500Medium } from "@expo-google-fonts/montserrat"
 
@@ -36,6 +37,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator headerMode="none" initialRouteName="HomeHistoryScreen">
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        <Stack.Screen name="PropertyHistoryScreen" component={PropertyHistoryScreen} />
         <Stack.Screen name="AccountScreen" component={AccountScreen} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />

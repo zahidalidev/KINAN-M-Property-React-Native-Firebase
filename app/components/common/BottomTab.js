@@ -10,7 +10,7 @@ function BottomTab({ props }) {
     return (
         <View style={{ flexDirection: 'row', alignItems: 'center', position: 'absolute', justifyContent: 'center', bottom: 0, width: "100%", height: RFPercentage(7), backgroundColor: Colors.white }}>
             <View style={{ width: "80%", flexDirection: "row", alignItems: 'center', justifyContent: 'space-between', }} >
-                <TouchableOpacity >
+                <TouchableOpacity onPress={() => props.navigation.navigate("HomeScreen")} >
                     <Image style={{ width: RFPercentage(4), height: RFPercentage(4) }} source={require('../../../assets/images/home.png')} />
                 </TouchableOpacity>
                 <TouchableOpacity  >
@@ -19,7 +19,7 @@ function BottomTab({ props }) {
                 <TouchableOpacity  >
                     <Image style={{ width: RFPercentage(4), height: RFPercentage(4) }} source={require('../../../assets/images/search.png')} />
                 </TouchableOpacity>
-                <TouchableOpacity  >
+                <TouchableOpacity onPress={() => props.navigation.navigate("AccountScreen")} >
                     <Image style={{ width: RFPercentage(4), height: RFPercentage(4) }} source={require('../../../assets/images/acc.png')} />
                 </TouchableOpacity>
             </View>

@@ -10,6 +10,7 @@ import MyAppButton from './../components/common/MyAppButton';
 
 //config
 import Colors from '../config/Colors';
+import { Inter_700Bold } from '@expo-google-fonts/inter';
 
 function LoginScreen2(props) {
 
@@ -40,7 +41,7 @@ function LoginScreen2(props) {
                 <TouchableOpacity onPress={() => props.navigation.navigate("SignupScreen")}>
                     <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(4.5) }} color={Colors.black} />
                 </TouchableOpacity>
-                <Text style={{ fontSize: RFPercentage(4.3), fontWeight: 'bold', marginTop: RFPercentage(2) }}>
+                <Text style={{ fontFamily: 'Inter_700Bold', fontSize: RFPercentage(4.3), fontWeight: 'bold', marginTop: RFPercentage(2) }}>
                     Login
                 </Text>
                 <Text style={{ color: Colors.lightGrey, fontSize: RFPercentage(2.1), marginTop: RFPercentage(1.3) }}>
@@ -77,7 +78,7 @@ function LoginScreen2(props) {
                         title="Login"
                         padding={RFPercentage(1.8)}
                         bold={true}
-                        // onPress={() => handleLogin()}
+                        onPress={() => props.navigation.navigate("HomeScreen")}
                         backgroundColor={Colors.white}
                         color={Colors.black}
                         width={"85%"}

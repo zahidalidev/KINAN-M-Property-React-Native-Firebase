@@ -51,10 +51,10 @@ function AccountScreen(props) {
                                 <Image style={{ marginLeft: RFPercentage(3) }} source={item.imageSource} />
                             </TouchableOpacity>
                             <View style={{ marginLeft: RFPercentage(2.5) }}>
-                                <Text style={{ fontFamily: 'Inter_500Medium', fontSize: RFPercentage(3), color: Colors.lightBrown }}>
+                                <Text style={{ fontFamily: 'Inter_500Medium', fontSize: RFPercentage(2.5), color: Colors.lightBrown }}>
                                     {item.mainTitle}
                                 </Text>
-                                <Text style={{ fontSize: RFPercentage(2), color: Colors.lightBrown }}>
+                                <Text style={{ fontSize: RFPercentage(1.8), color: Colors.lightBrown }}>
                                     {item.subTitle}
                                 </Text>
 
@@ -76,7 +76,7 @@ function AccountScreen(props) {
                 </View>
             </ScrollView>
             {/* Bottom tab */}
-            <BottomTab />
+            <BottomTab props={props} />
 
         </Screen>
     );
