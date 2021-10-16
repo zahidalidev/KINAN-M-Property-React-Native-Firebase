@@ -137,16 +137,16 @@ function HomeScreen(props) {
                     </View>
                 </View>
 
-                <Text style={{ fontSize: RFPercentage(2.5), marginLeft: RFPercentage(3.2), marginTop: RFPercentage(2), color: Colors.black, fontFamily: 'Inter_700Bold' }}>
+                <Text style={{ fontSize: RFPercentage(2.5), marginLeft: RFPercentage(3.2), marginTop: RFPercentage(5), color: Colors.black, fontFamily: 'Inter_700Bold' }}>
                     Recommendation!
                 </Text>
                 {/* Destinations Pics */}
-                <View style={{ marginBottom: RFPercentage(10), marginLeft: RFPercentage(3), width: '90%', justifyContent: 'center', alignItems: 'center', marginTop: RFPercentage(5), flexDirection: 'row' }}>
+                <View style={{ marginBottom: RFPercentage(10), marginLeft: RFPercentage(3), width: '90%', justifyContent: 'space-evenly', alignItems: 'center', marginTop: RFPercentage(3), flexDirection: 'row' }}>
                     <TouchableOpacity>
                         <Image source={require('../../assets/images/bottomCart1.png')} />
                     </TouchableOpacity>
                     <TouchableOpacity>
-                        <Image style={{ marginLeft: RFPercentage(2) }} source={require('../../assets/images/bottomCart2.png')} />
+                        <Image source={require('../../assets/images/bottomCart2.png')} />
                     </TouchableOpacity>
                 </View>
             </ScrollView>
