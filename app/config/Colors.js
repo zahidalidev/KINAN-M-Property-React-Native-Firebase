@@ -9,6 +9,9 @@ const Colors = {
     grey: "#808080",
     lightPink: '#E0D3A7',
     grey: '#636E7E',
-    greyDark: '#636E7E'
+    greyDark: '#636E7E',
+    pink: '#E0D3A775',
+    lightBrown: '#5F5F5F',
+    lightestBrownish: '#939C84'
 }
 export default Colors;
