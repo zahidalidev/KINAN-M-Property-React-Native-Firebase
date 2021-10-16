@@ -68,10 +68,10 @@ function AccountScreen(props) {
                         title="Sign out"
                         padding={RFPercentage(1.8)}
                         bold={true}
-                        onPress={() => props.navigation.navigate("LoginScreen2")}
+                        // onPress={() => props.navigation.navigate("LoginScreen2")}
                         backgroundColor={Colors.lightestBrownish}
                         color={Colors.white}
-                        width={"60%"}
+                        width={"50%"}
                     />
                 </View>
             </ScrollView>
