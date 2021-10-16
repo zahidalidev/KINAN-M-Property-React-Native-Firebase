@@ -10,14 +10,15 @@ import WelcomeScreen from './app/screens/WelcomeScreen';
 import LoginScreen from './app/screens/LoginScreen';
 import SignupScreen from './app/screens/SignupScreen';
 import LoginScreen2 from './app/screens/LoginScreen2';
+import HomeScreen from './app/screens/HomeScreen';
 
 //customfonts
 import { Inter_700Bold, useFonts } from "@expo-google-fonts/inter"
-import HomeScreen from './app/screens/HomeScreen';
 
 const Stack = createStackNavigator()
 
 export default function App() {
+
   const [fontsLoaded] = useFonts({
     Inter_700Bold
   })

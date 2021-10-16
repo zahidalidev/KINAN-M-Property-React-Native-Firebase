@@ -8,5 +8,7 @@ const Colors = {
     inputFieldBackgroundColor: "#E2E8F0",
     grey: "#808080",
     lightPink: '#E0D3A7',
+    grey: '#636E7E',
+    greyDark: '#636E7E'
 }
 export default Colors;

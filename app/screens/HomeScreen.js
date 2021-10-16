@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Image, TouchableOpacity, ScrollView, ImageBackground } from 'react-native';
 import { RFPercentage } from 'react-native-responsive-fontsize';
+import { Ionicons } from '@expo/vector-icons';
 
 //components
 import Screen from './../components/Screen';
 //config
 import Colors from '../config/Colors';
 import InputField from './../components/common/InputField';
+import { Inter_700Bold } from '@expo-google-fonts/inter';
+import BottomTab from '../components/common/BottomTab';
 
 function HomeScreen(props) {
 
@@ -23,11 +26,36 @@ function HomeScreen(props) {
         SetInputField(tempfeilds);
 
     };
+
+    const cartData = [
+        {
+            likesTitle: '14.5k',
+            personName: 'By ABCD Person',
+            profileImageSource: require('../../assets/images/profile.png')
+        },
+        {
+            likesTitle: '14.5k',
+            personName: 'By ABCD Person',
+            profileImageSource: require('../../assets/images/profile2.png')
+        },
+        {
+            likesTitle: '14.5k',
+            personName: 'By ABCD Person',
+            profileImageSource: require('../../assets/images/profile.png')
+        },
+        {
+            likesTitle: '14.5k',
+            personName: 'By ABCD Person',
+            profileImageSource: require('../../assets/images/profile.png')
+        },
+    ]
+
     return (
         <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "flex-start", backgroundColor: Colors.secondary }}>
             {/* Nav Container */}
-            <View style={{ width: '100%', flexDirection: 'row', alignItems: 'center', marginTop: RFPercentage(2) }}>
-                <TouchableOpacity style={{ marginLeft: RFPercentage(2) }}>
+            <View style={{ marginLeft: RFPercentage(2), width: '90%', flexDirection: 'row', alignItems: 'center', marginTop: RFPercentage(2) }}>
+                {/* Profile Image */}
+                <TouchableOpacity >
                     <Image source={require('../../assets/images/avatar.png')} />
                 </TouchableOpacity>
                 <View style={{ marginLeft: RFPercentage(1.5) }}>
@@ -39,17 +67,18 @@ function HomeScreen(props) {
                             Jean
                         </Text>
                     </View>
-                    <Text style={{ color: '#636E7E', fontSize: RFPercentage(2) }}>
+                    <Text style={{ color: Colors.grey, fontSize: RFPercentage(2) }}>
                         Welcome Back
                     </Text>
                 </View>
-                <TouchableOpacity style={{ position: 'absolute', right: RFPercentage(4) }}>
+                {/* Menue */}
+                <TouchableOpacity style={{ position: 'absolute', right: RFPercentage(0) }}>
                     <Image source={require('../../assets/images/menu.png')} />
                 </TouchableOpacity>
             </View>
 
+            {/* Input Fields */}
             <View style={{ marginTop: RFPercentage(2), justifyContent: 'center', alignItems: 'center', width: '100%' }}>
-                {/* Input Fields */}
                 {inputField.map((item, i) => (
                     <View key={i} style={{ marginTop: RFPercentage(2) }} >
                         <InputField
@@ -67,7 +96,62 @@ function HomeScreen(props) {
                     </View>
                 ))}
             </View>
+            <ScrollView style={{ backgroundColor: Colors.secondary, flex: 1, width: '100%', marginTop: RFPercentage(2) }} >
 
+
+                {/* Horizental scrolling cart */}
+                <ScrollView horizontal={true} style={{ marginTop: RFPercentage(5), width: '100%', backgroundColor: Colors.secondary }}>
+                    <View style={{ width: RFPercentage(200), flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
+                        {cartData.map((item, i) => (
+                            <TouchableOpacity key={i} style={{ marginLeft: RFPercentage(2.5), borderRadius: RFPercentage(3), alignItems: 'flex-start', justifyContent: 'center', width: RFPercentage(38), height: RFPercentage(38) }}>
+                                <ImageBackground style={{ width: '100%', height: '100%', justifyContent: 'flex-start', alignItems: 'flex-start' }} source={require('../../assets/images/cart1.png')} >
+                                    <View style={{ alignItems: 'center', flexDirection: 'row', marginLeft: RFPercentage(2), marginTop: RFPercentage(2) }}>
+                                        <Ionicons name="eye-sharp" style={{ fontSize: RFPercentage(2.5) }} color={Colors.white} />
+                                        <Text style={{ marginLeft: RFPercentage(0.5), color: Colors.white }}>{item.likesTitle}</Text>
+                                    </View>
+                                    <View style={{ alignItems: 'center', flexDirection: 'row', position: 'absolute', bottom: RFPercentage(3), marginLeft: RFPercentage(2) }}>
+                                        <Image style={{ width: RFPercentage(5), height: RFPercentage(5) }} source={item.profileImageSource} />
+                                        <Text style={{ marginLeft: RFPercentage(1), color: Colors.white }}>{item.personName} </Text>
+                                    </View>
+                                </ImageBackground>
+                            </TouchableOpacity>
+                        ))}
+                    </View>
+                </ScrollView>
+
+                <Text style={{ fontSize: RFPercentage(2), marginLeft: RFPercentage(3.2), marginTop: RFPercentage(2), color: Colors.grey }}>
+                    Latest News
+                </Text>
+
+                {/* Single cart */}
+                <View style={{ alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginTop: RFPercentage(3), alignSelf: 'center', width: '90%', backgroundColor: Colors.white, height: RFPercentage(18), borderRadius: RFPercentage(3) }}>
+                    <TouchableOpacity>
+                        <Image style={{ marginLeft: RFPercentage(3) }} source={require('../../assets/images/p2.png')} />
+                    </TouchableOpacity>
+                    <View style={{ marginLeft: RFPercentage(2) }}>
+                        <Text style={{ fontSize: RFPercentage(2.5), color: Colors.black }}>Person Name</Text>
+                        <Text style={{ color: Colors.greyDark, fontSize: RFPercentage(2) }}>I am renting my house for 2 years</Text>
+                    </View>
+                    <View style={{ alignItems: 'center', justifyContent: 'center', borderRadius: RFPercentage(10), marginLeft: RFPercentage(3), width: RFPercentage(3), height: RFPercentage(3), backgroundColor: "#939c84" }}>
+                        <Text style={{ alignSelf: 'center', color: Colors.white, fontSize: RFPercentage(2) }} >6</Text>
+                    </View>
+                </View>
+
+                <Text style={{ fontSize: RFPercentage(2.5), marginLeft: RFPercentage(3.2), marginTop: RFPercentage(2), color: Colors.black, fontFamily: 'Inter_700Bold' }}>
+                    Recommendation!
+                </Text>
+                {/* Destinations Pics */}
+                <View style={{ marginBottom: RFPercentage(10), marginLeft: RFPercentage(3), width: '90%', justifyContent: 'center', alignItems: 'center', marginTop: RFPercentage(5), flexDirection: 'row' }}>
+                    <TouchableOpacity>
+                        <Image source={require('../../assets/images/bottomCart1.png')} />
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Image style={{ marginLeft: RFPercentage(2) }} source={require('../../assets/images/bottomCart2.png')} />
+                    </TouchableOpacity>
+                </View>
+            </ScrollView>
+            {/* Bottom tab */}
+            <BottomTab />
         </Screen>
     );
 }
