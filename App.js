@@ -19,6 +19,7 @@ import PropertyHistoryScreen from './app/screens/PropertyHistoryScreen';
 import { Inter_700Bold, Inter_500Medium, Inter_400Regular, useFonts } from "@expo-google-fonts/inter"
 import { Montserrat_500Medium, Montserrat_600SemiBold } from "@expo-google-fonts/montserrat"
 import SearchScreen from './app/screens/SearchScreen';
+import MyAddsScreen from './app/screens/MyAddsScreen';
 
 const Stack = createStackNavigator()
 
@@ -37,8 +38,9 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="SearchScreen">
+      <Stack.Navigator headerMode="none" initialRouteName="MyAddsScreen">
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        <Stack.Screen name="MyAddsScreen" component={MyAddsScreen} />
         <Stack.Screen name="SearchScreen" component={SearchScreen} />
         <Stack.Screen name="PropertyHistoryScreen" component={PropertyHistoryScreen} />
         <Stack.Screen name="AccountScreen" component={AccountScreen} />

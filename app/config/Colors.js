@@ -14,6 +14,7 @@ const Colors = {
     lightBrown: '#5F5F5F',
     lightestBrownish: '#939C84',
     lightOrange: '#F9C24B',
-    darkBlue: '#585DF9'
+    darkBlue: '#585DF9',
+    toolightGrey: '#E5E5E5'
 }
 export default Colors;

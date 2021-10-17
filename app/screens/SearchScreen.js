@@ -112,7 +112,6 @@ function SearchScreen(props) {
                     {/* Container */}
                     <View style={{ width: RFPercentage(200), flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
                         {/* MiniContainer */}
-
                         {topCartData.map((item, i) => (
 
                             <View key={i} style={{ marginLeft: RFPercentage(2.5), borderRadius: RFPercentage(3), alignItems: 'flex-start', justifyContent: 'flex-start', width: RFPercentage(35), height: RFPercentage(60), backgroundColor: Colors.white }}>
@@ -159,7 +158,7 @@ function SearchScreen(props) {
 
                 {/* bottom cart */}
                 {bottomCartData.map((item, i) => (
-                    <View key={i} style={{ alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginTop: i === 0 ? RFPercentage(3) : RFPercentage(0), alignSelf: 'center', width: '90%', backgroundColor: Colors.secondary, height: RFPercentage(18), borderRadius: RFPercentage(3) }}>
+                    <View key={i} style={{ alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginTop: i === 0 ? RFPercentage(3) : RFPercentage(0), alignSelf: 'center', width: '90%', backgroundColor: Colors.secondary, height: RFPercentage(15) }}>
                         <TouchableOpacity>
                             <Image style={{ width: RFPercentage(11.5), height: RFPercentage(11.5), marginLeft: RFPercentage(3) }} source={item.imageSource} />
                         </TouchableOpacity>
