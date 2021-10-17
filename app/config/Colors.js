@@ -12,6 +12,8 @@ const Colors = {
     greyDark: '#636E7E',
     pink: '#E0D3A775',
     lightBrown: '#5F5F5F',
-    lightestBrownish: '#939C84'
+    lightestBrownish: '#939C84',
+    lightOrange: '#F9C24B',
+    darkBlue: '#585DF9'
 }
 export default Colors;

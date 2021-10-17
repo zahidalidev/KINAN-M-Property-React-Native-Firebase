@@ -71,7 +71,7 @@ function HomeScreen(props) {
                         Welcome Back
                     </Text>
                 </View>
-                {/* Menue */}
+                {/* Menue Icon */}
                 <TouchableOpacity style={{ position: 'absolute', right: RFPercentage(0) }}>
                     <Image source={require('../../assets/images/menu.png')} />
                 </TouchableOpacity>
@@ -88,7 +88,7 @@ function HomeScreen(props) {
                             borderWidth={0}
                             leftIconName={"search"}
                             borderRadius={RFPercentage(1)}
-                            fontSize={RFPercentage(2)}
+                            fontSize={RFPercentage(2.3)}
                             handleFeild={(text) => handleChange(text, i)}
                             value={item.value}
                             width={"95%"}
@@ -97,7 +97,6 @@ function HomeScreen(props) {
                 ))}
             </View>
             <ScrollView style={{ backgroundColor: Colors.secondary, flex: 1, width: '100%', marginTop: RFPercentage(2) }} >
-
 
                 {/* Horizental scrolling cart */}
                 <ScrollView horizontal={true} style={{ marginTop: RFPercentage(5), width: '100%', backgroundColor: Colors.secondary }}>

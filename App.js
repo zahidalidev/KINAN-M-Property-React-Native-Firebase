@@ -17,7 +17,8 @@ import PropertyHistoryScreen from './app/screens/PropertyHistoryScreen';
 
 //custom fonts
 import { Inter_700Bold, Inter_500Medium, Inter_400Regular, useFonts } from "@expo-google-fonts/inter"
-import { Montserrat_500Medium } from "@expo-google-fonts/montserrat"
+import { Montserrat_500Medium, Montserrat_600SemiBold } from "@expo-google-fonts/montserrat"
+import SearchScreen from './app/screens/SearchScreen';
 
 const Stack = createStackNavigator()
 
@@ -27,7 +28,8 @@ export default function App() {
     Inter_700Bold,
     Inter_500Medium,
     Inter_400Regular,
-    Montserrat_500Medium
+    Montserrat_500Medium,
+    Montserrat_600SemiBold
   })
   if (!fontsLoaded) return <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }} >
     <ActivityIndicator size={RFPercentage(6)} color={Colors.primary} />
@@ -35,8 +37,9 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="HomeHistoryScreen">
+      <Stack.Navigator headerMode="none" initialRouteName="SearchScreen">
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        <Stack.Screen name="SearchScreen" component={SearchScreen} />
         <Stack.Screen name="PropertyHistoryScreen" component={PropertyHistoryScreen} />
         <Stack.Screen name="AccountScreen" component={AccountScreen} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />

@@ -51,9 +51,11 @@ function AccountScreen(props) {
                                 <Image style={{ marginLeft: RFPercentage(3) }} source={item.imageSource} />
                             </TouchableOpacity>
                             <View style={{ marginLeft: RFPercentage(2.5) }}>
-                                <Text style={{ fontFamily: 'Inter_500Medium', fontSize: RFPercentage(2.5), color: Colors.lightBrown }}>
-                                    {item.mainTitle}
-                                </Text>
+                                <TouchableOpacity onPress={i === 1 ? () => props.navigation.navigate("HomeHistoryScreen") : null} >
+                                    <Text style={{ fontFamily: 'Inter_500Medium', fontSize: RFPercentage(2.5), color: Colors.lightBrown }}>
+                                        {item.mainTitle}
+                                    </Text>
+                                </TouchableOpacity>
                                 <Text style={{ fontSize: RFPercentage(1.8), color: Colors.lightBrown }}>
                                     {item.subTitle}
                                 </Text>

@@ -71,7 +71,7 @@ function HomeHistoryScreen(props) {
 
             {/* cart */}
             <ScrollView style={{ backgroundColor: Colors.secondary, flex: 1, width: '100%' }} >
-                <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: RFPercentage(1) }}>
+                <View style={{ marginBottom: RFPercentage(5), justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: RFPercentage(1) }}>
                     {cartData.map((item, i) => (
                         <View key={i} style={{ justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row', marginTop: i === 0 ? RFPercentage(4) : RFPercentage(1.5), width: '90%', height: RFPercentage(16), borderRadius: RFPercentage(3), backgroundColor: Colors.pink }}>
                             <TouchableOpacity>
@@ -99,7 +99,6 @@ function HomeHistoryScreen(props) {
                     ))}
                 </View>
             </ScrollView>
-            <View style={{ marginBottom: RFPercentage(10) }} />
         </Screen>
     );
 }
