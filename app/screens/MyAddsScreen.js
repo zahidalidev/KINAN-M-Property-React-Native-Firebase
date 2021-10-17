@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, ImageBackground, Image, TouchableOpacity, ScrollView } from 'react-native'
 import { RFPercentage } from 'react-native-responsive-fontsize';
 
@@ -8,6 +8,9 @@ import Screen from './../components/Screen';
 import Colors from './../config/Colors';
 
 function MyAddsScreen(props) {
+
+    const [firstButton, setFirstButton] = useState(true);
+    const [secondButton, setSecondButton] = useState(false);
 
     const cartData = [
         {
@@ -23,12 +26,29 @@ function MyAddsScreen(props) {
             imageSource: require('../../assets/images/h1.png')
         },
     ]
+
     return (
         <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: Colors.secondary }}>
 
+            {/* Top Buttons */}
+            <View style={{ justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row', marginTop: RFPercentage(4), width: RFPercentage(45), height: RFPercentage(7), borderRadius: RFPercentage(25), backgroundColor: "#939C840F" }} >
+                {/* first button */}
+                <TouchableOpacity onPress={() => [setFirstButton(true), setSecondButton(false)]} style={{ alignItems: 'center', justifyContent: 'center', backgroundColor: firstButton ? Colors.lightestBrownish : '#939C840F', width: "50%", height: RFPercentage(7), borderRadius: RFPercentage(10) }}>
+                    <Text style={{ color: firstButton ? Colors.white : '#4D4D4D', fontSize: RFPercentage(2.6) }}>
+                        My Adds
+                    </Text>
+                </TouchableOpacity>
+                {/* second button */}
+                <TouchableOpacity onPress={() => [setFirstButton(false), setSecondButton(true)]} style={{ alignItems: 'center', justifyContent: 'center', backgroundColor: secondButton ? Colors.lightestBrownish : '#939C840F', width: "50%", height: RFPercentage(7), borderRadius: RFPercentage(10) }}>
+                    <Text style={{ color: secondButton ? Colors.white : '#4D4D4D', fontSize: RFPercentage(2.6) }}>
+                        Favourite
+                    </Text>
+                </TouchableOpacity>
+            </View>
 
             <ScrollView style={{ backgroundColor: Colors.secondary, flex: 1, width: '100%' }} >
                 <View style={{ marginBottom: RFPercentage(5), justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: RFPercentage(1) }}>
+
                     {/* Cart */}
                     {cartData.map((item, i) => (
 
@@ -68,6 +88,7 @@ function MyAddsScreen(props) {
                         </View>
                     ))}
                 </View>
+
             </ScrollView>
 
         </Screen>
