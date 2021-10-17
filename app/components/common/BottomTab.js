@@ -13,10 +13,10 @@ function BottomTab({ props }) {
                 <TouchableOpacity onPress={() => props.navigation.navigate("HomeScreen")} >
                     <Image style={{ width: RFPercentage(4), height: RFPercentage(4) }} source={require('../../../assets/images/home.png')} />
                 </TouchableOpacity>
-                <TouchableOpacity  >
+                <TouchableOpacity onPress={() => props.navigation.navigate("DiscoverScreen")}   >
                     <Image style={{ width: RFPercentage(4), height: RFPercentage(4) }} source={require('../../../assets/images/disc.png')} />
                 </TouchableOpacity>
-                <TouchableOpacity  >
+                <TouchableOpacity onPress={() => props.navigation.navigate("SearchScreen")}  >
                     <Image style={{ width: RFPercentage(4), height: RFPercentage(4) }} source={require('../../../assets/images/search.png')} />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => props.navigation.navigate("AccountScreen")} >

@@ -8,6 +8,7 @@ import Screen from './../components/Screen';
 import Colors from '../config/Colors';
 import MyAppButton from './../components/common/MyAppButton';
 import BottomTab from '../components/common/BottomTab';
+import MyAddsScreen from './MyAddsScreen';
 
 function AccountScreen(props) {
 
@@ -51,7 +52,7 @@ function AccountScreen(props) {
                                 <Image style={{ marginLeft: RFPercentage(3) }} source={item.imageSource} />
                             </TouchableOpacity>
                             <View style={{ marginLeft: RFPercentage(2.5) }}>
-                                <TouchableOpacity onPress={i === 1 ? () => props.navigation.navigate("HomeHistoryScreen") : null} >
+                                <TouchableOpacity onPress={i === 1 ? () => props.navigation.navigate("HomeHistoryScreen") : null || i === 3 ? () => props.navigation.navigate("MyAddsScreen") : null} >
                                     <Text style={{ fontFamily: 'Inter_500Medium', fontSize: RFPercentage(2.5), color: Colors.lightBrown }}>
                                         {item.mainTitle}
                                     </Text>

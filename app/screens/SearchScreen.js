@@ -19,16 +19,16 @@ function SearchScreen(props) {
 
     const topCartData = [
         {
-            imageSource: require('../../assets/images/cart1.png'),
+            imageSource: require('../../assets/images/cart11.png'),
         },
         {
-            imageSource: require('../../assets/images/cart1.png'),
+            imageSource: require('../../assets/images/cart11.png'),
         },
         {
-            imageSource: require('../../assets/images/cart1.png'),
+            imageSource: require('../../assets/images/cart11.png'),
         },
         {
-            imageSource: require('../../assets/images/cart1.png'),
+            imageSource: require('../../assets/images/cart11.png'),
         },
     ]
 
@@ -69,7 +69,7 @@ function SearchScreen(props) {
                 <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(1) }} >
                     <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(4.5) }} color={Colors.black} />
                 </TouchableOpacity>
-                <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(3.4), color: Colors.black }}>
+                <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(3), color: Colors.black }}>
                     Search
                 </Text>
                 {/* Menue Icon */}
@@ -99,37 +99,37 @@ function SearchScreen(props) {
             </View>
             {/* Side headings */}
             <View style={{ marginTop: RFPercentage(6), flexDirection: 'row', width: '90%', justifyContent: 'center', alignItems: 'center' }}>
-                <Text style={{ position: 'absolute', left: 0, fontSize: RFPercentage(2.7), fontWeight: 'bold', color: Colors.black }}>Top results</Text>
+                <Text style={{ position: 'absolute', left: 0, fontSize: RFPercentage(2.4), fontWeight: 'bold', color: Colors.black }}>Top results</Text>
                 <TouchableOpacity style={{ position: 'absolute', right: 0 }}>
-                    <Text style={{ color: Colors.lightestBrownish, fontSize: RFPercentage(2.5) }}>Show all</Text>
+                    <Text style={{ color: Colors.lightestBrownish, fontSize: RFPercentage(2.2) }}>Show all</Text>
                 </TouchableOpacity>
             </View>
 
             <ScrollView style={{ backgroundColor: "#E5E5E5", flex: 1, width: '100%', marginTop: RFPercentage(2) }} >
 
                 {/* Horizental scrolling cart */}
-                <ScrollView horizontal={true} style={{ marginTop: RFPercentage(5), width: '100%', backgroundColor: Colors.secondary }}>
+                <ScrollView horizontal={true} style={{ marginTop: RFPercentage(5), width: '100%', backgroundColor: "#E5E5E5" }}>
                     {/* Container */}
                     <View style={{ width: RFPercentage(200), flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
                         {/* MiniContainer */}
                         {topCartData.map((item, i) => (
 
-                            <View key={i} style={{ marginLeft: RFPercentage(2.5), borderRadius: RFPercentage(3), alignItems: 'flex-start', justifyContent: 'flex-start', width: RFPercentage(35), height: RFPercentage(60), backgroundColor: Colors.white }}>
+                            <View key={i} style={{ marginLeft: RFPercentage(2.5), borderRadius: RFPercentage(3), alignItems: 'flex-start', justifyContent: 'flex-start', width: RFPercentage(33), height: RFPercentage(52), backgroundColor: Colors.white }}>
                                 {/* Top Image */}
-                                <Image style={{ width: '100%', height: RFPercentage(35), justifyContent: 'flex-start', alignItems: 'flex-start' }} source={item.imageSource} />
+                                <Image style={{ borderRadius: RFPercentage(2), width: RFPercentage(33), height: RFPercentage(28), justifyContent: 'flex-start', alignItems: 'flex-start' }} source={item.imageSource} />
                                 {/* Heart Icon */}
                                 <TouchableOpacity style={{ position: 'absolute', top: RFPercentage(2), right: RFPercentage(2), justifyContent: 'center', alignItems: 'center', width: RFPercentage(4.5), height: RFPercentage(4.5), borderRadius: RFPercentage(20), backgroundColor: Colors.white }}>
                                     <Image source={require('../../assets/images/heart2.png')} />
                                 </TouchableOpacity>
                                 {/* Descrription */}
                                 <View style={{ marginTop: RFPercentage(2), alignSelf: 'center', width: '80%', alignItems: 'flex-start', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: RFPercentage(2.4), marginTop: RFPercentage(2) }}>
+                                    <Text style={{ fontSize: RFPercentage(2.2), marginTop: RFPercentage(2) }}>
                                         abcsd apartment
                                     </Text>
-                                    <Text style={{ fontSize: RFPercentage(2.4), marginTop: RFPercentage(0.5) }}>
+                                    <Text style={{ fontSize: RFPercentage(2.2), marginTop: RFPercentage(0.5) }}>
                                         near Connecticut,
                                     </Text>
-                                    <Text style={{ fontSize: RFPercentage(2.4), marginTop: RFPercentage(0.5) }}>
+                                    <Text style={{ fontSize: RFPercentage(2.2), marginTop: RFPercentage(0.5) }}>
                                         USA
                                     </Text>
                                 </View>
@@ -158,7 +158,7 @@ function SearchScreen(props) {
 
                 {/* bottom cart */}
                 {bottomCartData.map((item, i) => (
-                    <View key={i} style={{ alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginTop: i === 0 ? RFPercentage(3) : RFPercentage(0), alignSelf: 'center', width: '90%', backgroundColor: Colors.secondary, height: RFPercentage(15) }}>
+                    <View key={i} style={{ alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginTop: i === 0 ? RFPercentage(3) : RFPercentage(0), alignSelf: 'center', width: '90%', backgroundColor: "#E5E5E5", height: RFPercentage(15) }}>
                         <TouchableOpacity>
                             <Image style={{ width: RFPercentage(11.5), height: RFPercentage(11.5), marginLeft: RFPercentage(3) }} source={item.imageSource} />
                         </TouchableOpacity>
@@ -167,11 +167,11 @@ function SearchScreen(props) {
                                 <TouchableOpacity>
                                     <Image source={require('../../assets/images/location1.png')} />
                                 </TouchableOpacity>
-                                <Text style={{ marginLeft: RFPercentage(1), color: Colors.darkBlue, fontSize: RFPercentage(2) }}>
+                                <Text style={{ marginLeft: RFPercentage(1), color: Colors.darkBlue, fontSize: RFPercentage(1.9) }}>
                                     Connecticut
                                 </Text>
                             </View>
-                            <Text style={{ marginTop: RFPercentage(1), fontFamily: 'Montserrat_600SemiBold', fontSize: RFPercentage(2.5), color: Colors.black }}>
+                            <Text style={{ marginTop: RFPercentage(1), fontFamily: 'Montserrat_600SemiBold', fontSize: RFPercentage(2.2), color: Colors.black }}>
                                 House Name
                             </Text>
                             <View style={{ marginTop: RFPercentage(0.5), flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>

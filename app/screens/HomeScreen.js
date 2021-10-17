@@ -99,11 +99,11 @@ function HomeScreen(props) {
             <ScrollView style={{ backgroundColor: Colors.secondary, flex: 1, width: '100%', marginTop: RFPercentage(2) }} >
 
                 {/* Horizental scrolling cart */}
-                <ScrollView horizontal={true} style={{ marginTop: RFPercentage(5), width: '100%', backgroundColor: Colors.secondary }}>
+                <ScrollView horizontal={true} style={{ marginTop: RFPercentage(3), width: '100%', backgroundColor: Colors.secondary }}>
                     <View style={{ width: RFPercentage(200), flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
                         {cartData.map((item, i) => (
-                            <TouchableOpacity key={i} style={{ marginLeft: RFPercentage(2.5), borderRadius: RFPercentage(3), alignItems: 'flex-start', justifyContent: 'center', width: RFPercentage(38), height: RFPercentage(38) }}>
-                                <ImageBackground style={{ width: '100%', height: '100%', justifyContent: 'flex-start', alignItems: 'flex-start' }} source={require('../../assets/images/cart1.png')} >
+                            <TouchableOpacity key={i} style={{ marginLeft: RFPercentage(2.5), borderRadius: RFPercentage(3), alignItems: 'flex-start', justifyContent: 'center', width: RFPercentage(30), height: RFPercentage(30) }}>
+                                <ImageBackground style={{ width: RFPercentage(30), height: RFPercentage(30), justifyContent: 'flex-start', alignItems: 'flex-start' }} source={require('../../assets/images/cart1.png')} >
                                     <View style={{ alignItems: 'center', flexDirection: 'row', marginLeft: RFPercentage(2), marginTop: RFPercentage(2) }}>
                                         <Ionicons name="eye-sharp" style={{ fontSize: RFPercentage(2.5) }} color={Colors.white} />
                                         <Text style={{ marginLeft: RFPercentage(0.5), color: Colors.white }}>{item.likesTitle}</Text>
@@ -123,7 +123,7 @@ function HomeScreen(props) {
                 </Text>
 
                 {/* Single cart */}
-                <View style={{ alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginTop: RFPercentage(3), alignSelf: 'center', width: '90%', backgroundColor: Colors.white, height: RFPercentage(18), borderRadius: RFPercentage(3) }}>
+                <View style={{ alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginTop: RFPercentage(3), alignSelf: 'center', width: '90%', backgroundColor: Colors.white, height: RFPercentage(14), borderRadius: RFPercentage(3) }}>
                     <TouchableOpacity>
                         <Image style={{ marginLeft: RFPercentage(3) }} source={require('../../assets/images/p2.png')} />
                     </TouchableOpacity>

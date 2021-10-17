@@ -52,7 +52,7 @@ function DiscoverScreen(props) {
                 <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(1) }} >
                     <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(4.5) }} color={Colors.black} />
                 </TouchableOpacity>
-                <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(3.4), color: Colors.black }}>
+                <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(2.7), color: Colors.black }}>
                     Discover
                 </Text>
                 {/* Menue Icon */}

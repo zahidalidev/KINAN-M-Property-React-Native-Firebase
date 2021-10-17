@@ -40,7 +40,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="NewsScreen">
+      <Stack.Navigator headerMode="none" initialRouteName="WelcomeScreen">
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="NewsScreen" component={NewsScreen} />
         <Stack.Screen name="DiscoverScreen" component={DiscoverScreen} />
