@@ -44,7 +44,7 @@ function DiscoverScreen(props) {
 
     };
     return (
-        <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: Colors.secondary }}>
+        <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: "#E5E5E5" }}>
 
             {/* Nav Bar with menue */}
             <View style={{ marginTop: RFPercentage(3.5), width: '90%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
@@ -82,7 +82,7 @@ function DiscoverScreen(props) {
             </View>
 
             {/* Cart */}
-            <ScrollView style={{ backgroundColor: Colors.secondary, flex: 1, width: '100%' }} >
+            <ScrollView style={{ backgroundColor: "#E5E5E5", flex: 1, width: '100%' }} >
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: RFPercentage(1) }}>
                     {cartData.map((item, i) => (
                         <View key={i} style={{ justifyContent: 'flex-start', alignItems: 'center', marginTop: RFPercentage(3), width: '90%', height: RFPercentage(50), backgroundColor: Colors.white, borderRadius: RFPercentage(2) }}>

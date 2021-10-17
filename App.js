@@ -21,6 +21,7 @@ import { Montserrat_500Medium, Montserrat_600SemiBold } from "@expo-google-fonts
 import SearchScreen from './app/screens/SearchScreen';
 import MyAddsScreen from './app/screens/MyAddsScreen';
 import DiscoverScreen from './app/screens/DiscoverScreen';
+import NewsScreen from './app/screens/NewsScreen';
 
 const Stack = createStackNavigator()
 
@@ -39,8 +40,9 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="DiscoverScreen">
+      <Stack.Navigator headerMode="none" initialRouteName="NewsScreen">
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        <Stack.Screen name="NewsScreen" component={NewsScreen} />
         <Stack.Screen name="DiscoverScreen" component={DiscoverScreen} />
         <Stack.Screen name="MyAddsScreen" component={MyAddsScreen} />
         <Stack.Screen name="SearchScreen" component={SearchScreen} />

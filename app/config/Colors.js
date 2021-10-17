@@ -15,6 +15,7 @@ const Colors = {
     lightestBrownish: '#939C84',
     lightOrange: '#F9C24B',
     darkBlue: '#585DF9',
-    toolightGrey: '#E5E5E5'
+    toolightGrey: '#E5E5E5',
+    lightWhite: '#F3F3F3'
 }
 export default Colors;

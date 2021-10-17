@@ -61,7 +61,7 @@ function SearchScreen(props) {
 
     };
     return (
-        <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: Colors.secondary }}>
+        <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: "#E5E5E5" }}>
 
             {/* Nav Bar with menue */}
             <View style={{ marginTop: RFPercentage(3.5), width: '90%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
@@ -105,7 +105,7 @@ function SearchScreen(props) {
                 </TouchableOpacity>
             </View>
 
-            <ScrollView style={{ backgroundColor: Colors.secondary, flex: 1, width: '100%', marginTop: RFPercentage(2) }} >
+            <ScrollView style={{ backgroundColor: "#E5E5E5", flex: 1, width: '100%', marginTop: RFPercentage(2) }} >
 
                 {/* Horizental scrolling cart */}
                 <ScrollView horizontal={true} style={{ marginTop: RFPercentage(5), width: '100%', backgroundColor: Colors.secondary }}>
