@@ -7,12 +7,12 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 
 //components
+import InputField from './../components/common/InputField';
+import BottomTab from '../components/common/BottomTab';
 import Screen from './../components/Screen';
 
 //config
 import Colors from './../config/Colors';
-import InputField from './../components/common/InputField';
-import BottomTab from '../components/common/BottomTab';
 
 function SearchScreen(props) {
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, ImageBackground, Image, TouchableOpacity, ScrollView } from 'react-native'
 import { RFPercentage } from 'react-native-responsive-fontsize';
+import BottomTab from '../components/common/BottomTab';
 
 //components
 import Screen from './../components/Screen';
@@ -31,7 +32,7 @@ function MyAddsScreen(props) {
         <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: Colors.secondary }}>
 
             {/* Top Buttons */}
-            <View style={{ justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row', marginTop: RFPercentage(4), width: RFPercentage(45), height: RFPercentage(7), borderRadius: RFPercentage(25), backgroundColor: "#939C840F" }} >
+            <View style={{ marginBottom: RFPercentage(1), justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row', marginTop: RFPercentage(4), width: RFPercentage(45), height: RFPercentage(7), borderRadius: RFPercentage(25), backgroundColor: "#939C840F" }} >
                 {/* first button */}
                 <TouchableOpacity onPress={() => [setFirstButton(true), setSecondButton(false)]} style={{ alignItems: 'center', justifyContent: 'center', backgroundColor: firstButton ? Colors.lightestBrownish : '#939C840F', width: "50%", height: RFPercentage(7), borderRadius: RFPercentage(10) }}>
                     <Text style={{ color: firstButton ? Colors.white : '#4D4D4D', fontSize: RFPercentage(2.6) }}>
@@ -88,8 +89,10 @@ function MyAddsScreen(props) {
                         </View>
                     ))}
                 </View>
-
+                <View style={{ marginBottom: RFPercentage(8) }} />
             </ScrollView>
+            {/* bottom tab */}
+            <BottomTab props={props} />
 
         </Screen>
     );
