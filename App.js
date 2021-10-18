@@ -14,10 +14,6 @@ import HomeScreen from './app/screens/HomeScreen';
 import AccountScreen from './app/screens/AccountScreen';
 import HomeHistoryScreen from './app/screens/HomeHistoryScreen';
 import PropertyHistoryScreen from './app/screens/PropertyHistoryScreen';
-
-//custom fonts
-import { Inter_700Bold, Inter_500Medium, Inter_400Regular, useFonts } from "@expo-google-fonts/inter"
-import { Montserrat_500Medium, Montserrat_600SemiBold } from "@expo-google-fonts/montserrat"
 import SearchScreen from './app/screens/SearchScreen';
 import MyAddsScreen from './app/screens/MyAddsScreen';
 import DiscoverScreen from './app/screens/DiscoverScreen';
@@ -25,6 +21,11 @@ import NewsScreen from './app/screens/NewsScreen';
 import HelpScreen from './app/screens/HelpScreen';
 import AboutusScreen from './app/screens/AboutusScreen';
 import PostNewsScreen from './app/screens/PostNewsScreen';
+import ContactusScreen from './app/screens/ContactusScreen';
+
+//custom fonts
+import { Inter_700Bold, Inter_500Medium, Inter_400Regular, useFonts } from "@expo-google-fonts/inter"
+import { Montserrat_500Medium, Montserrat_600SemiBold } from "@expo-google-fonts/montserrat"
 
 const Stack = createStackNavigator()
 
@@ -43,8 +44,9 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="PostNewsScreen">
+      <Stack.Navigator headerMode="none" initialRouteName="ContactusScreen">
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        <Stack.Screen name="ContactusScreen" component={ContactusScreen} />
         <Stack.Screen name="PostNewsScreen" component={PostNewsScreen} />
         <Stack.Screen name="AboutusScreen" component={AboutusScreen} />
         <Stack.Screen name="HelpScreen" component={HelpScreen} />

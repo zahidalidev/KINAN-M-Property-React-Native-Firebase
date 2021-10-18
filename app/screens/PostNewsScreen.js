@@ -5,10 +5,11 @@ import { RFPercentage } from 'react-native-responsive-fontsize';
 
 //components
 import Screen from './../components/Screen';
-//config
-import Colors from '../config/Colors';
 import InputField from './../components/common/InputField';
 import MyAppButton from './../components/common/MyAppButton';
+
+//config
+import Colors from '../config/Colors';
 
 function PostNewsScreen(props) {
     const [inputField, SetInputField] = useState([

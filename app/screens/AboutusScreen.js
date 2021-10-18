@@ -62,7 +62,7 @@ function AboutusScreen(props) {
                     // onPress={() => props.navigation.navigate("LoginScreen2")}
                     backgroundColor={Colors.lightestBrownish}
                     color={Colors.white}
-                    width={"60%"}
+                    width={"80%"}
                 />
             </View>
         </Screen>

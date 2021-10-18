@@ -5,10 +5,10 @@ import { Ionicons } from '@expo/vector-icons';
 
 //components
 import Screen from './../components/Screen';
+import MyAppButton from './../components/common/MyAppButton';
+
 //config
 import Colors from './../config/Colors';
-import { Inter_400Regular } from '@expo-google-fonts/inter';
-import MyAppButton from './../components/common/MyAppButton';
 
 function HelpScreen(props) {
 
@@ -85,7 +85,7 @@ function HelpScreen(props) {
                     // onPress={() => props.navigation.navigate("LoginScreen2")}
                     backgroundColor={Colors.lightestBrownish}
                     color={Colors.white}
-                    width={"60%"}
+                    width={"80%"}
                 />
             </View>
         </Screen>
