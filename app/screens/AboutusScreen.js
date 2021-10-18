@@ -5,12 +5,12 @@ import { Ionicons } from '@expo/vector-icons';
 
 //components
 import Screen from './../components/Screen';
-//config
-import Colors from './../config/Colors';
-import { Inter_400Regular } from '@expo-google-fonts/inter';
 import MyAppButton from './../components/common/MyAppButton';
 
-function HelpScreen(props) {
+//config
+import Colors from './../config/Colors';
+
+function AboutusScreen(props) {
 
     const dummyText = [
         {
@@ -41,7 +41,7 @@ function HelpScreen(props) {
                     <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.8) }} color={Colors.black} />
                 </TouchableOpacity>
                 <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(2.8), color: Colors.black }}>
-                    HELP/FAQ
+                    About Us
                 </Text>
             </View>
 
@@ -52,29 +52,6 @@ function HelpScreen(props) {
                     </Text>
                 </View>
             ))}
-            {/* Questions */}
-            <View style={{ width: '85%', marginTop: RFPercentage(5) }}>
-                <Text style={{ alignSelf: 'flex-start', color: Colors.black, fontSize: RFPercentage(2.5), fontFamily: 'Inter_700Bold' }}>
-                    FAQ
-                </Text>
-                <Text style={{ marginTop: RFPercentage(4), alignSelf: 'flex-start', color: Colors.black, fontSize: RFPercentage(2.5), fontFamily: 'Inter_700Bold' }}>
-                    Q. Lorem ipsum dolor sit amet?
-                </Text>
-                <Text style={{ marginLeft: RFPercentage(3), marginTop: RFPercentage(1), alignSelf: 'flex-start', color: Colors.black, fontSize: RFPercentage(2), fontFamily: 'Inter_400Regular' }}>
-                    consectetur adipiscing elit.
-                </Text>
-            </View>
-            <View style={{ width: '85%', marginTop: RFPercentage(0) }}>
-                <Text style={{ marginTop: RFPercentage(4), alignSelf: 'flex-start', color: Colors.black, fontSize: RFPercentage(2.5), fontFamily: 'Inter_700Bold' }}>
-                    Q. magna aliqua. Ut enim ad minim veniam.
-                </Text>
-                <Text style={{ marginLeft: RFPercentage(3), marginTop: RFPercentage(1), alignSelf: 'flex-start', color: Colors.black, fontSize: RFPercentage(2), fontFamily: 'Inter_400Regular' }}>
-                    quis nostrud exercitation ullamco laboris
-                </Text>
-                <Text style={{ marginLeft: RFPercentage(3), marginTop: RFPercentage(0), alignSelf: 'flex-start', color: Colors.black, fontSize: RFPercentage(2), fontFamily: 'Inter_400Regular' }}>
-                    nisi ut aliquip ex ea commodo consequa
-                </Text>
-            </View>
 
             {/* Bottom Button */}
             <View style={{ width: '100%', position: 'absolute', bottom: RFPercentage(4) }}>
@@ -92,4 +69,4 @@ function HelpScreen(props) {
     );
 }
 
-export default HelpScreen;
+export default AboutusScreen;
