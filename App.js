@@ -44,7 +44,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="ContactusScreen">
+      <Stack.Navigator headerMode="none" initialRouteName="PostNewsScreen">
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="ContactusScreen" component={ContactusScreen} />
         <Stack.Screen name="PostNewsScreen" component={PostNewsScreen} />

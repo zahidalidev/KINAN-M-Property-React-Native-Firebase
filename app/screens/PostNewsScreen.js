@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native'
 import { Ionicons } from '@expo/vector-icons';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 
@@ -10,6 +10,7 @@ import MyAppButton from './../components/common/MyAppButton';
 
 //config
 import Colors from '../config/Colors';
+import BottomTab from '../components/common/BottomTab';
 
 function PostNewsScreen(props) {
     const [inputField, SetInputField] = useState([
@@ -54,61 +55,65 @@ function PostNewsScreen(props) {
                 </Text>
             </View>
 
-            {/* White Box 1 */}
-            <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: RFPercentage(5), backgroundColor: Colors.white, width: '90%', height: RFPercentage(20), borderRadius: RFPercentage(3) }} >
-                <Text style={{ marginTop: RFPercentage(2), marginLeft: RFPercentage(3), color: '#3E4462', fontSize: RFPercentage(3) }}>
-                    Title
-                </Text>
-                {/* Input field */}
-                <View style={{ marginTop: RFPercentage(1), justifyContent: 'center', alignItems: 'center', width: '100%' }}>
-                    {/* Input Fields */}
-                    {inputField.map((item, i) => (
-                        <View key={i} style={{ marginTop: RFPercentage(2) }} >
-                            <InputField
-                                placeholder={item.placeholder}
-                                backgroundColor={Colors.inputFieldGrey}
-                                borderWidth={0.3}
-                                borderColor={Colors.inputFieldGrey}
-                                borderRadius={RFPercentage(1)}
-                                fontSize={RFPercentage(2)}
-                                handleFeild={(text) => handleChange(text, i)}
-                                value={item.value}
-                                width={"95%"}
-                            />
+            <ScrollView style={{ backgroundColor: Colors.lightestBrownish, flex: 1, width: '100%' }} >
+                <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: RFPercentage(1) }}>
+                    {/* White Box 1 */}
+                    <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: RFPercentage(5), backgroundColor: Colors.white, width: '90%', height: RFPercentage(20), borderRadius: RFPercentage(3) }} >
+                        <Text style={{ marginTop: RFPercentage(2), marginLeft: RFPercentage(3), color: '#3E4462', fontSize: RFPercentage(3) }}>
+                            Title
+                        </Text>
+                        {/* Input field */}
+                        <View style={{ marginTop: RFPercentage(1), justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+                            {/* Input Fields */}
+                            {inputField.map((item, i) => (
+                                <View key={i} style={{ marginTop: RFPercentage(2) }} >
+                                    <InputField
+                                        placeholder={item.placeholder}
+                                        backgroundColor={Colors.inputFieldGrey}
+                                        borderWidth={0.3}
+                                        borderColor={Colors.inputFieldGrey}
+                                        borderRadius={RFPercentage(1)}
+                                        fontSize={RFPercentage(2)}
+                                        handleFeild={(text) => handleChange(text, i)}
+                                        value={item.value}
+                                        width={"95%"}
+                                    />
+                                </View>
+                            ))}
                         </View>
-                    ))}
-                </View>
-            </View>
+                    </View>
 
-            {/* White Box 2 */}
-            <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: RFPercentage(5), backgroundColor: Colors.white, width: '90%', height: RFPercentage(25), borderRadius: RFPercentage(3) }} >
-                <Text style={{ marginTop: RFPercentage(2), marginLeft: RFPercentage(3), color: '#3E4462', fontSize: RFPercentage(3) }}>
-                    Detail
-                </Text>
-                {/* Input field */}
-                <View style={{ marginTop: RFPercentage(1), justifyContent: 'center', alignItems: 'center', width: '100%' }}>
-                    {/* Input Fields */}
-                    {secondInputField.map((item, i) => (
-                        <View key={i} style={{ marginTop: RFPercentage(2) }} >
-                            <InputField
-                                placeholder={item.placeholder}
-                                backgroundColor={Colors.inputFieldGrey}
-                                height={RFPercentage(12)}
-                                borderWidth={0.3}
-                                borderColor={Colors.inputFieldGrey}
-                                borderRadius={RFPercentage(1.2)}
-                                fontSize={RFPercentage(2)}
-                                handleFeild={(text) => handleChange2(text, i)}
-                                value={item.value}
-                                width={"95%"}
-                            />
+                    {/* White Box 2 */}
+                    <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: RFPercentage(5), backgroundColor: Colors.white, width: '90%', height: RFPercentage(25), borderRadius: RFPercentage(3) }} >
+                        <Text style={{ marginTop: RFPercentage(2), marginLeft: RFPercentage(3), color: '#3E4462', fontSize: RFPercentage(3) }}>
+                            Detail
+                        </Text>
+                        {/* Input field */}
+                        <View style={{ marginTop: RFPercentage(1), justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+                            {/* Input Fields */}
+                            {secondInputField.map((item, i) => (
+                                <View key={i} style={{ marginTop: RFPercentage(2) }} >
+                                    <InputField
+                                        placeholder={item.placeholder}
+                                        backgroundColor={Colors.inputFieldGrey}
+                                        height={RFPercentage(12)}
+                                        borderWidth={0.3}
+                                        borderColor={Colors.inputFieldGrey}
+                                        borderRadius={RFPercentage(1.2)}
+                                        fontSize={RFPercentage(2)}
+                                        handleFeild={(text) => handleChange2(text, i)}
+                                        value={item.value}
+                                        width={"95%"}
+                                    />
+                                </View>
+                            ))}
                         </View>
-                    ))}
-                </View>
-            </View>
+                    </View>
 
+                </View>
+            </ScrollView>
             {/* Bottom Button */}
-            <View style={{ width: '100%', position: 'absolute', bottom: RFPercentage(4) }}>
+            <View style={{ width: '100%', marginBottom: RFPercentage(10) }}>
                 <MyAppButton
                     title="Post News"
                     padding={RFPercentage(1.8)}
@@ -119,6 +124,8 @@ function PostNewsScreen(props) {
                     width={"80%"}
                 />
             </View>
+            {/* Bottom tab */}
+            <BottomTab props={props} />
         </Screen>
     );
 }
