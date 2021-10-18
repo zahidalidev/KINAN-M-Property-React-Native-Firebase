@@ -44,16 +44,16 @@ function LoginScreen(props) {
             <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginLeft: RFPercentage(5), marginTop: RFPercentage(2) }}>
                 {/* Back Icon */}
                 <TouchableOpacity onPress={() => props.navigation.navigate("WelcomeScreen")}>
-                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(4.5) }} color={Colors.black} />
+                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.8) }} color={Colors.black} />
                 </TouchableOpacity>
-                <Text style={{ fontSize: RFPercentage(4.3), fontWeight: 'bold', marginTop: RFPercentage(2) }}>
+                <Text style={{ fontSize: RFPercentage(4), fontWeight: 'bold', marginTop: RFPercentage(2) }}>
                     Signup
                 </Text>
-                <Text style={{ color: Colors.lightGrey, fontSize: RFPercentage(2.1), marginTop: RFPercentage(1.3) }}>
+                <Text style={{ color: Colors.lightGrey, fontSize: RFPercentage(1.9), marginTop: RFPercentage(1.3) }}>
                     Let’s explore your dream house
                 </Text>
                 {/* Input field */}
-                <View style={{ marginTop: RFPercentage(2), justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+                <View style={{ marginTop: RFPercentage(1), justifyContent: 'center', alignItems: 'center', width: '100%' }}>
                     {/* Input Fields */}
                     {inputField.map((item, i) => (
                         <View key={i} style={{ marginTop: RFPercentage(2) }} >
@@ -85,7 +85,7 @@ function LoginScreen(props) {
                         <View key={i} style={{ marginTop: RFPercentage(2.5) }}>
                             <MyAppButton
                                 title={item.title}
-                                padding={RFPercentage(1.8)}
+                                padding={RFPercentage(1.5)}
                                 bold={true}
                                 onPress={() => i === 0 ? props.navigation.navigate("SignupScreen") : null}
                                 backgroundColor={item.backgroundColor}

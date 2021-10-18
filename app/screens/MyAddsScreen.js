@@ -35,13 +35,13 @@ function MyAddsScreen(props) {
             <View style={{ marginBottom: RFPercentage(1), justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row', marginTop: RFPercentage(4), width: RFPercentage(45), height: RFPercentage(7), borderRadius: RFPercentage(25), backgroundColor: "#939C840F" }} >
                 {/* first button */}
                 <TouchableOpacity onPress={() => [setFirstButton(true), setSecondButton(false)]} style={{ alignItems: 'center', justifyContent: 'center', backgroundColor: firstButton ? Colors.lightestBrownish : '#939C840F', width: "50%", height: RFPercentage(7), borderRadius: RFPercentage(10) }}>
-                    <Text style={{ color: firstButton ? Colors.white : '#4D4D4D', fontSize: RFPercentage(2.6) }}>
+                    <Text style={{ color: firstButton ? Colors.white : '#4D4D4D', fontSize: RFPercentage(2.3) }}>
                         My Adds
                     </Text>
                 </TouchableOpacity>
                 {/* second button */}
                 <TouchableOpacity onPress={() => [setFirstButton(false), setSecondButton(true)]} style={{ alignItems: 'center', justifyContent: 'center', backgroundColor: secondButton ? Colors.lightestBrownish : '#939C840F', width: "50%", height: RFPercentage(7), borderRadius: RFPercentage(10) }}>
-                    <Text style={{ color: secondButton ? Colors.white : '#4D4D4D', fontSize: RFPercentage(2.6) }}>
+                    <Text style={{ color: secondButton ? Colors.white : '#4D4D4D', fontSize: RFPercentage(2.3) }}>
                         Favourite
                     </Text>
                 </TouchableOpacity>
@@ -55,9 +55,9 @@ function MyAddsScreen(props) {
 
                         <View key={i} style={{ alignItems: 'flex-start', justifyContent: 'flex-start', flexDirection: 'row', marginTop: RFPercentage(3), alignSelf: 'center', width: '90%', backgroundColor: Colors.toolightGrey, height: RFPercentage(29), borderRadius: RFPercentage(2) }}>
                             <TouchableOpacity style={{ marginTop: RFPercentage(2.3) }}>
-                                <Image style={{ marginLeft: RFPercentage(2) }} source={item.imageSource} />
+                                <Image style={{ marginLeft: RFPercentage(1) }} source={item.imageSource} />
                             </TouchableOpacity>
-                            <View style={{ marginLeft: RFPercentage(2.5), marginTop: RFPercentage(2.8) }}>
+                            <View style={{ marginLeft: RFPercentage(1), marginTop: RFPercentage(2.8) }}>
                                 <Text style={{ color: '#616161', fontFamily: 'Inter_500Medium', fontSize: RFPercentage(2) }}>
                                     163 E 81st St #2C, New York,
                                 </Text>

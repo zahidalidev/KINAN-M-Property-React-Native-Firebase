@@ -50,7 +50,7 @@ function DiscoverScreen(props) {
             <View style={{ marginTop: RFPercentage(3.5), width: '90%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                 {/* Back Icon */}
                 <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(1) }} >
-                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(4.5) }} color={Colors.black} />
+                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.8) }} color={Colors.black} />
                 </TouchableOpacity>
                 <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(2.7), color: Colors.black }}>
                     Discover
@@ -88,7 +88,7 @@ function DiscoverScreen(props) {
                         <View key={i} style={{ justifyContent: 'flex-start', alignItems: 'center', marginTop: RFPercentage(3), width: '90%', height: RFPercentage(50), backgroundColor: Colors.white, borderRadius: RFPercentage(2) }}>
                             <Image style={{ borderRadius: RFPercentage(2), width: '100%', height: RFPercentage(30) }} source={item.imageSource} />
                             <View style={{ marginTop: RFPercentage(3), width: '90%', flexDirection: 'row', alignSelf: 'center', alignItems: 'center', justifyContent: 'flex-start' }}>
-                                <Text style={{ fontFamily: 'Inter_700Bold', fontSize: RFPercentage(2.8) }}>
+                                <Text style={{ fontFamily: 'Inter_700Bold', fontSize: RFPercentage(2.5) }}>
                                     White Smith Villa House
                                 </Text>
                                 <TouchableOpacity style={{ borderRadius: RFPercentage(0.8), height: RFPercentage(5.5), width: RFPercentage(12), justifyContent: 'center', alignItems: 'center', position: 'absolute', right: 0, backgroundColor: '#E0D3A775' }}>

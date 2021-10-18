@@ -67,7 +67,7 @@ function SearchScreen(props) {
             <View style={{ marginTop: RFPercentage(3.5), width: '90%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                 {/* Back Icon */}
                 <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(1) }} >
-                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(4.5) }} color={Colors.black} />
+                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.8) }} color={Colors.black} />
                 </TouchableOpacity>
                 <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(3), color: Colors.black }}>
                     Search
@@ -99,9 +99,9 @@ function SearchScreen(props) {
             </View>
             {/* Side headings */}
             <View style={{ marginTop: RFPercentage(6), flexDirection: 'row', width: '90%', justifyContent: 'center', alignItems: 'center' }}>
-                <Text style={{ position: 'absolute', left: 0, fontSize: RFPercentage(2.4), fontWeight: 'bold', color: Colors.black }}>Top results</Text>
+                <Text style={{ position: 'absolute', left: 0, fontSize: RFPercentage(2.2), fontWeight: 'bold', color: Colors.black }}>Top results</Text>
                 <TouchableOpacity style={{ position: 'absolute', right: 0 }}>
-                    <Text style={{ color: Colors.lightestBrownish, fontSize: RFPercentage(2.2) }}>Show all</Text>
+                    <Text style={{ color: Colors.lightestBrownish, fontSize: RFPercentage(2) }}>Show all</Text>
                 </TouchableOpacity>
             </View>
 
@@ -123,13 +123,13 @@ function SearchScreen(props) {
                                 </TouchableOpacity>
                                 {/* Descrription */}
                                 <View style={{ marginTop: RFPercentage(2), alignSelf: 'center', width: '80%', alignItems: 'flex-start', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: RFPercentage(2.2), marginTop: RFPercentage(2) }}>
+                                    <Text style={{ fontSize: RFPercentage(2), marginTop: RFPercentage(2) }}>
                                         abcsd apartment
                                     </Text>
-                                    <Text style={{ fontSize: RFPercentage(2.2), marginTop: RFPercentage(0.5) }}>
+                                    <Text style={{ fontSize: RFPercentage(2), marginTop: RFPercentage(0.5) }}>
                                         near Connecticut,
                                     </Text>
-                                    <Text style={{ fontSize: RFPercentage(2.2), marginTop: RFPercentage(0.5) }}>
+                                    <Text style={{ fontSize: RFPercentage(2), marginTop: RFPercentage(0.5) }}>
                                         USA
                                     </Text>
                                 </View>
@@ -152,7 +152,7 @@ function SearchScreen(props) {
 
                 </ScrollView>
 
-                <Text style={{ fontSize: RFPercentage(2.5), marginLeft: RFPercentage(3.2), marginTop: RFPercentage(5), color: Colors.black, fontFamily: 'Montserrat_500Medium' }}>
+                <Text style={{ fontSize: RFPercentage(2.2), marginLeft: RFPercentage(3.2), marginTop: RFPercentage(5), color: Colors.black, fontFamily: 'Montserrat_500Medium' }}>
                     Recommendation!
                 </Text>
 

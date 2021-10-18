@@ -47,7 +47,7 @@ function AccountScreen(props) {
             <ScrollView style={{ backgroundColor: Colors.secondary, flex: 1, width: '100%' }} >
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: RFPercentage(1) }}>
                     {cartData.map((item, i) => (
-                        <View key={i} style={{ justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row', marginTop: i === 0 ? RFPercentage(4) : RFPercentage(3.2), width: '85%', height: RFPercentage(16), borderRadius: RFPercentage(3), backgroundColor: Colors.pink }}>
+                        <View key={i} style={{ justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row', marginTop: i === 0 ? RFPercentage(4) : RFPercentage(3.2), width: '85%', height: RFPercentage(14), borderRadius: RFPercentage(3), backgroundColor: Colors.pink }}>
                             <TouchableOpacity>
                                 <Image style={{ marginLeft: RFPercentage(3) }} source={item.imageSource} />
                             </TouchableOpacity>

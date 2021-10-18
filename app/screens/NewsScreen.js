@@ -45,9 +45,9 @@ function NewsScreen(props) {
             <View style={{ marginTop: RFPercentage(3.5), width: '90%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                 {/* Back Icon */}
                 <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(1) }} >
-                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(4.5) }} color={Colors.white} />
+                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.8) }} color={Colors.white} />
                 </TouchableOpacity>
-                <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(3.4), color: Colors.white }}>
+                <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(2.9), color: Colors.white }}>
                     News
                 </Text>
             </View>
@@ -62,10 +62,10 @@ function NewsScreen(props) {
                                     <Image source={item.imageSource} />
                                 </TouchableOpacity>
                                 <View style={{ marginLeft: RFPercentage(2) }}>
-                                    <Text style={{ fontSize: RFPercentage(2.5), fontFamily: 'Montserrat_600SemiBold' }}>
+                                    <Text style={{ fontSize: RFPercentage(2.3), fontFamily: 'Montserrat_600SemiBold' }}>
                                         Brandon Wolfel
                                     </Text>
-                                    <Text style={{ marginTop: RFPercentage(0.6), color: Colors.black, fontSize: RFPercentage(1.7), fontFamily: 'Montserrat_500Medium' }}>
+                                    <Text style={{ marginTop: RFPercentage(0.6), color: Colors.black, fontSize: RFPercentage(1.6), fontFamily: 'Montserrat_500Medium' }}>
                                         Lorem ipsum dolor sit amet,cipsum
                                     </Text>
                                     <Text style={{ position: 'absolute', right: 0, bottom: RFPercentage(2), fontSize: RFPercentage(1.9) }}>10:25</Text>
@@ -81,8 +81,8 @@ function NewsScreen(props) {
                     <Image style={{ width: RFPercentage(12.5), height: RFPercentage(12.5) }} source={require('../../assets/images/plus1.png')} />
                 </TouchableOpacity>
                 {/* bottom tab */}
-                <BottomTab props={props} />
             </View >
+            <BottomTab props={props} />
 
         </Screen >
     );

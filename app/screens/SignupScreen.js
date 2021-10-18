@@ -38,12 +38,12 @@ function SignupScreen(props) {
             <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginLeft: RFPercentage(5), marginTop: RFPercentage(2) }}>
                 {/* Back Icon */}
                 <TouchableOpacity onPress={() => props.navigation.navigate("LoginScreen")}>
-                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(4.5) }} color={Colors.black} />
+                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.8) }} color={Colors.black} />
                 </TouchableOpacity>
-                <Text style={{ fontSize: RFPercentage(4.3), fontWeight: 'bold', marginTop: RFPercentage(2) }}>
+                <Text style={{ fontSize: RFPercentage(4), fontWeight: 'bold', marginTop: RFPercentage(2) }}>
                     Signup
                 </Text>
-                <Text style={{ color: Colors.lightGrey, fontSize: RFPercentage(2.1), marginTop: RFPercentage(1.3) }}>
+                <Text style={{ color: Colors.lightGrey, fontSize: RFPercentage(1.9), marginTop: RFPercentage(1.3) }}>
                     Let’s explore your dream house
                 </Text>
                 {/* Input field */}
@@ -66,7 +66,7 @@ function SignupScreen(props) {
                         </View>
                     ))}
                 </View>
-                <Text style={{ color: '#7A7E80', fontSize: RFPercentage(1.8), marginTop: RFPercentage(1) }}>
+                <Text style={{ color: '#7A7E80', fontSize: RFPercentage(1.7), marginTop: RFPercentage(1) }}>
                     You will receive a confirmation Email click to verify.
                 </Text>
             </View>
@@ -78,7 +78,7 @@ function SignupScreen(props) {
                 <View style={{ width: "100%", position: 'absolute', bottom: RFPercentage(10) }}>
                     <MyAppButton
                         title="Signup"
-                        padding={RFPercentage(1.8)}
+                        padding={RFPercentage(1.6)}
                         bold={true}
                         onPress={() => props.navigation.navigate("LoginScreen2")}
                         backgroundColor={Colors.white}

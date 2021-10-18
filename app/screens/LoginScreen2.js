@@ -39,12 +39,12 @@ function LoginScreen2(props) {
             <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginLeft: RFPercentage(5), marginTop: RFPercentage(2) }}>
                 {/* Back Icon */}
                 <TouchableOpacity onPress={() => props.navigation.navigate("SignupScreen")}>
-                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(4.5) }} color={Colors.black} />
+                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.8) }} color={Colors.black} />
                 </TouchableOpacity>
-                <Text style={{ fontFamily: 'Inter_700Bold', fontSize: RFPercentage(4.3), fontWeight: 'bold', marginTop: RFPercentage(2) }}>
+                <Text style={{ fontFamily: 'Inter_700Bold', fontSize: RFPercentage(4), fontWeight: 'bold', marginTop: RFPercentage(2) }}>
                     Login
                 </Text>
-                <Text style={{ color: Colors.lightGrey, fontSize: RFPercentage(2.1), marginTop: RFPercentage(1.3) }}>
+                <Text style={{ color: Colors.lightGrey, fontSize: RFPercentage(1.9), marginTop: RFPercentage(1.3) }}>
                     Let’s explore your dream house
                 </Text>
                 {/* Input field */}
@@ -76,7 +76,7 @@ function LoginScreen2(props) {
                 <View style={{ width: "100%", position: 'absolute', bottom: RFPercentage(10) }}>
                     <MyAppButton
                         title="Login"
-                        padding={RFPercentage(1.8)}
+                        padding={RFPercentage(1.6)}
                         bold={true}
                         onPress={() => props.navigation.navigate("HomeScreen")}
                         backgroundColor={Colors.white}

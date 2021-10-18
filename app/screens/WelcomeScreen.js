@@ -11,10 +11,10 @@ function WelcomeScreen(props) {
             {/* background image */}
             <ImageBackground style={styles.imageContainer} source={require('../../assets/images/welcome.png')}>
                 {/* Logo */}
-                <Image style={{ width: RFPercentage(35), height: RFPercentage(35) }} source={require('../../assets/images/logo.png')} />
+                <Image style={{ width: RFPercentage(30), height: RFPercentage(30) }} source={require('../../assets/images/logo.png')} />
                 {/* Title */}
-                <Text style={{ fontFamily: "Inter_700Bold", color: '#444444', fontSize: RFPercentage(3.7), fontWeight: 'bold' }}>Let's find your</Text>
-                <Text style={{ fontFamily: "Inter_700Bold", color: '#444444', fontSize: RFPercentage(3.7), fontWeight: 'bold' }}>dream house</Text>
+                <Text style={{ marginTop: RFPercentage(-2), fontFamily: "Inter_700Bold", color: '#444444', fontSize: RFPercentage(3.5), fontWeight: 'bold' }}>Let's find your</Text>
+                <Text style={{ marginTop: RFPercentage(0), fontFamily: "Inter_700Bold", color: '#444444', fontSize: RFPercentage(3.5), fontWeight: 'bold' }}>dream house</Text>
                 {/* Next Button */}
                 <TouchableOpacity onPress={() => props.navigation.navigate("LoginScreen")} style={{ alignItems: 'center', justifyContent: 'center', position: 'absolute', bottom: RFPercentage(15) }}>
                     <Image style={{ width: RFPercentage(8.6), height: RFPercentage(8.6) }} source={require('../../assets/images/next.png')} />

@@ -67,7 +67,7 @@ function HomeScreen(props) {
                             Jean
                         </Text>
                     </View>
-                    <Text style={{ color: Colors.grey, fontSize: RFPercentage(2) }}>
+                    <Text style={{ color: Colors.grey, fontSize: RFPercentage(1.9) }}>
                         Welcome Back
                     </Text>
                 </View>
@@ -110,7 +110,7 @@ function HomeScreen(props) {
                                     </View>
                                     <View style={{ alignItems: 'center', flexDirection: 'row', position: 'absolute', bottom: RFPercentage(3), marginLeft: RFPercentage(2) }}>
                                         <Image style={{ width: RFPercentage(5), height: RFPercentage(5) }} source={item.profileImageSource} />
-                                        <Text style={{ marginLeft: RFPercentage(1), color: Colors.white }}>{item.personName} </Text>
+                                        <Text style={{ marginLeft: RFPercentage(1), color: Colors.white, fontSize: RFPercentage(1.8) }}>{item.personName} </Text>
                                     </View>
                                 </ImageBackground>
                             </TouchableOpacity>
@@ -118,18 +118,18 @@ function HomeScreen(props) {
                     </View>
                 </ScrollView>
 
-                <Text style={{ fontSize: RFPercentage(2), marginLeft: RFPercentage(3.2), marginTop: RFPercentage(2), color: Colors.grey }}>
+                <Text style={{ fontSize: RFPercentage(1.9), marginLeft: RFPercentage(3.2), marginTop: RFPercentage(2), color: Colors.grey }}>
                     Latest News
                 </Text>
 
                 {/* Single cart */}
-                <View style={{ alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginTop: RFPercentage(3), alignSelf: 'center', width: '90%', backgroundColor: Colors.white, height: RFPercentage(14), borderRadius: RFPercentage(3) }}>
+                <View style={{ alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginTop: RFPercentage(3), alignSelf: 'center', width: '90%', backgroundColor: Colors.white, height: RFPercentage(13), borderRadius: RFPercentage(3) }}>
                     <TouchableOpacity>
                         <Image style={{ marginLeft: RFPercentage(3) }} source={require('../../assets/images/p2.png')} />
                     </TouchableOpacity>
                     <View style={{ marginLeft: RFPercentage(2) }}>
-                        <Text style={{ fontSize: RFPercentage(2.5), color: Colors.black }}>Person Name</Text>
-                        <Text style={{ color: Colors.greyDark, fontSize: RFPercentage(2) }}>I am renting my house for 2 years</Text>
+                        <Text style={{ fontSize: RFPercentage(2.3), color: Colors.black }}>Person Name</Text>
+                        <Text style={{ color: Colors.greyDark, fontSize: RFPercentage(1.8) }}>I am renting my house for 2 years</Text>
                     </View>
                     <View style={{ alignItems: 'center', justifyContent: 'center', borderRadius: RFPercentage(10), marginLeft: RFPercentage(3), width: RFPercentage(3), height: RFPercentage(3), backgroundColor: "#939c84" }}>
                         <Text style={{ alignSelf: 'center', color: Colors.white, fontSize: RFPercentage(2) }} >6</Text>

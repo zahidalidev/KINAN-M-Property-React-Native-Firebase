@@ -62,9 +62,9 @@ function PropertyHistoryScreen(props) {
             <View style={{ marginTop: RFPercentage(3.5), width: '90%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                 {/* Back Icon */}
                 <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(1) }} >
-                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(4.5) }} color={Colors.black} />
+                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.8) }} color={Colors.black} />
                 </TouchableOpacity>
-                <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(3.3), color: Colors.black }}>
+                <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(2.8), color: Colors.black }}>
                     Property History
                 </Text>
             </View>
@@ -75,7 +75,7 @@ function PropertyHistoryScreen(props) {
                     {cartData.map((item, i) => (
                         <View key={i} style={{ justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row', marginTop: i === 0 ? RFPercentage(4) : RFPercentage(1.5), width: '90%', height: RFPercentage(16), borderRadius: RFPercentage(3), backgroundColor: Colors.pink }}>
                             <TouchableOpacity>
-                                <Image style={{ marginLeft: RFPercentage(3) }} source={item.imageSource} />
+                                <Image style={{ marginLeft: RFPercentage(1) }} source={item.imageSource} />
                             </TouchableOpacity>
                             <View style={{ marginLeft: RFPercentage(2.5) }}>
                                 <Text style={{ fontFamily: 'Inter_500Medium', fontSize: RFPercentage(2), color: "#616161" }}>
