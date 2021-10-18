@@ -16,6 +16,8 @@ const Colors = {
     lightOrange: '#F9C24B',
     darkBlue: '#585DF9',
     toolightGrey: '#E5E5E5',
-    lightWhite: '#F3F3F3'
+    lightWhite: '#F3F3F3',
+    inputFieldGrey: '#F1F1F1',
+    lightBlack: '#1E1E1E'
 }
 export default Colors;

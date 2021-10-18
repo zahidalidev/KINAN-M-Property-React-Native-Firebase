@@ -24,6 +24,7 @@ import DiscoverScreen from './app/screens/DiscoverScreen';
 import NewsScreen from './app/screens/NewsScreen';
 import HelpScreen from './app/screens/HelpScreen';
 import AboutusScreen from './app/screens/AboutusScreen';
+import PostNewsScreen from './app/screens/PostNewsScreen';
 
 const Stack = createStackNavigator()
 
@@ -42,8 +43,9 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="AboutusScreen">
+      <Stack.Navigator headerMode="none" initialRouteName="PostNewsScreen">
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        <Stack.Screen name="PostNewsScreen" component={PostNewsScreen} />
         <Stack.Screen name="AboutusScreen" component={AboutusScreen} />
         <Stack.Screen name="HelpScreen" component={HelpScreen} />
         <Stack.Screen name="NewsScreen" component={NewsScreen} />
