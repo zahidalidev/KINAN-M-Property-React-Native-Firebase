@@ -22,6 +22,7 @@ import HelpScreen from './app/screens/HelpScreen';
 import AboutusScreen from './app/screens/AboutusScreen';
 import PostNewsScreen from './app/screens/PostNewsScreen';
 import ContactusScreen from './app/screens/ContactusScreen';
+import HousesellScreen from './app/screens/HousesellScreen';
 
 //custom fonts
 import { Inter_700Bold, Inter_500Medium, Inter_400Regular, useFonts } from "@expo-google-fonts/inter"
@@ -44,8 +45,9 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="PostNewsScreen">
+      <Stack.Navigator headerMode="none" initialRouteName="HousesellScreen">
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        <Stack.Screen name="HousesellScreen" component={HousesellScreen} />
         <Stack.Screen name="ContactusScreen" component={ContactusScreen} />
         <Stack.Screen name="PostNewsScreen" component={PostNewsScreen} />
         <Stack.Screen name="AboutusScreen" component={AboutusScreen} />

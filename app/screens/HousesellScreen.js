@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native'
+import { View, Text, TouchableOpacity, ScrollView, Image } from 'react-native'
 import { Ionicons } from '@expo/vector-icons';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 
@@ -12,7 +12,7 @@ import BottomTab from '../components/common/BottomTab';
 //config
 import Colors from '../config/Colors';
 
-function PostNewsScreen(props) {
+function HousesellScreen(props) {
     const [inputField, SetInputField] = useState([
         {
             placeholder: "Home Address and Location",
@@ -51,23 +51,27 @@ function PostNewsScreen(props) {
 
     };
     return (
-        <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: Colors.lightestBrownish }}>
-            {/* Nav */}
+        <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: Colors.secondary }}>
+            {/* Nav Bar with menue */}
             <View style={{ marginTop: RFPercentage(3.5), width: '90%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                 {/* Back Icon */}
                 <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(1) }} >
-                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.8) }} color={Colors.white} />
+                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.8) }} color={Colors.black} />
                 </TouchableOpacity>
-                <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(2.9), color: Colors.white }}>
-                    Post News
+                <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(2.7), color: Colors.black }}>
+                    Sell House
                 </Text>
+                {/* Menue Icon */}
+                <TouchableOpacity style={{ position: 'absolute', right: RFPercentage(0) }}>
+                    <Image source={require('../../assets/images/menu.png')} />
+                </TouchableOpacity>
             </View>
 
-            <ScrollView style={{ backgroundColor: Colors.lightestBrownish, flex: 1, width: '100%' }} >
+            <ScrollView style={{ backgroundColor: Colors.secondary, flex: 1, width: '100%' }} >
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: RFPercentage(1) }}>
                     {/* White Boxes */}
                     {inputField.map((item, i) => (
-                        <View key={i} style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: RFPercentage(5), backgroundColor: Colors.white, width: '90%', height: i === 0 ? RFPercentage(19) : RFPercentage(24), borderRadius: RFPercentage(3) }} >
+                        <View key={i} style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: i === 0 ? RFPercentage(5) : RFPercentage(2.5), backgroundColor: Colors.white, width: '90%', height: i === 0 ? RFPercentage(19) : RFPercentage(24), borderRadius: RFPercentage(3) }} >
                             <View style={{ marginTop: RFPercentage(1), justifyContent: 'center', alignItems: 'center', width: '100%' }}>
                                 <View style={{ marginTop: RFPercentage(2) }} >
                                     <Text style={{ marginBottom: RFPercentage(2), color: '#3E4462', fontSize: RFPercentage(3) }}>
@@ -89,21 +93,30 @@ function PostNewsScreen(props) {
                             </View>
                         </View>
                     ))}
+
+                    {/* Image adding components */}
+                    <View style={{ flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', marginTop: RFPercentage(2.5), width: "90%", height: RFPercentage(20), backgroundColor: Colors.white, borderRadius: RFPercentage(3) }}>
+                        <View style={{ marginLeft: RFPercentage(2), justifyContent: 'center', alignItems: 'center', backgroundColor: Colors.white, width: RFPercentage(10), height: RFPercentage(15) }}>
+                            <TouchableOpacity style={{ justifyContent: 'center', alignItems: "center", width: RFPercentage(7), height: RFPercentage(7), borderRadius: RFPercentage(20), backgroundColor: "#E3E3E3" }}>
+                                <Image style={{ width: RFPercentage(3), height: RFPercentage(3) }} source={require('../../assets/images/pluss.png')} />
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+
+                    {/* Bottom Button */}
+                    <View style={{ width: '100%', marginTop: RFPercentage(10), marginBottom: RFPercentage(10) }}>
+                        <MyAppButton
+                            title="Post News"
+                            padding={RFPercentage(1.8)}
+                            bold={true}
+                            // onPress={() => props.navigation.navigate("LoginScreen2")}
+                            backgroundColor={Colors.lightestBrownish}
+                            color={Colors.white}
+                            width={"80%"}
+                        />
+                    </View>
                 </View>
             </ScrollView>
-
-            {/* Bottom Button */}
-            <View style={{ width: '100%', marginBottom: RFPercentage(10) }}>
-                <MyAppButton
-                    title="Post News"
-                    padding={RFPercentage(1.8)}
-                    bold={true}
-                    // onPress={() => props.navigation.navigate("LoginScreen2")}
-                    backgroundColor={Colors.lightPink}
-                    color={Colors.lightBlack}
-                    width={"80%"}
-                />
-            </View>
 
             {/* Bottom tab */}
             <BottomTab props={props} />
@@ -111,4 +124,4 @@ function PostNewsScreen(props) {
     );
 }
 
-export default PostNewsScreen;
+export default HousesellScreen;
