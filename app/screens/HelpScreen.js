@@ -38,26 +38,26 @@ function HelpScreen(props) {
             <View style={{ marginTop: RFPercentage(3.5), width: '90%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                 {/* Back Icon */}
                 <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(1) }} >
-                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.8) }} color={Colors.black} />
+                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.4) }} color={Colors.black} />
                 </TouchableOpacity>
-                <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(2.8), color: Colors.black }}>
+                <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(2.6), color: Colors.black }}>
                     HELP/FAQ
                 </Text>
             </View>
 
             {dummyText.map((item, i) => (
                 <View key={i} style={{ width: '85%', marginTop: i === 0 ? RFPercentage(5) : RFPercentage(0.5) }}>
-                    <Text style={{ alignSelf: 'flex-start', color: Colors.black, fontSize: RFPercentage(2.3), fontFamily: 'Inter_400Regular' }}>
+                    <Text style={{ alignSelf: 'flex-start', color: Colors.black, fontSize: RFPercentage(2.2), fontFamily: 'Inter_400Regular' }}>
                         {item.text}
                     </Text>
                 </View>
             ))}
             {/* Questions */}
             <View style={{ width: '85%', marginTop: RFPercentage(5) }}>
-                <Text style={{ alignSelf: 'flex-start', color: Colors.black, fontSize: RFPercentage(2.5), fontFamily: 'Inter_700Bold' }}>
+                <Text style={{ alignSelf: 'flex-start', color: Colors.black, fontSize: RFPercentage(2.3), fontFamily: 'Inter_700Bold' }}>
                     FAQ
                 </Text>
-                <Text style={{ marginTop: RFPercentage(4), alignSelf: 'flex-start', color: Colors.black, fontSize: RFPercentage(2.5), fontFamily: 'Inter_700Bold' }}>
+                <Text style={{ marginTop: RFPercentage(4), alignSelf: 'flex-start', color: Colors.black, fontSize: RFPercentage(2.3), fontFamily: 'Inter_700Bold' }}>
                     Q. Lorem ipsum dolor sit amet?
                 </Text>
                 <Text style={{ marginLeft: RFPercentage(3), marginTop: RFPercentage(1), alignSelf: 'flex-start', color: Colors.black, fontSize: RFPercentage(2), fontFamily: 'Inter_400Regular' }}>
@@ -65,7 +65,7 @@ function HelpScreen(props) {
                 </Text>
             </View>
             <View style={{ width: '85%', marginTop: RFPercentage(0) }}>
-                <Text style={{ marginTop: RFPercentage(4), alignSelf: 'flex-start', color: Colors.black, fontSize: RFPercentage(2.5), fontFamily: 'Inter_700Bold' }}>
+                <Text style={{ marginTop: RFPercentage(4), alignSelf: 'flex-start', color: Colors.black, fontSize: RFPercentage(2.3), fontFamily: 'Inter_700Bold' }}>
                     Q. magna aliqua. Ut enim ad minim veniam.
                 </Text>
                 <Text style={{ marginLeft: RFPercentage(3), marginTop: RFPercentage(1), alignSelf: 'flex-start', color: Colors.black, fontSize: RFPercentage(2), fontFamily: 'Inter_400Regular' }}>

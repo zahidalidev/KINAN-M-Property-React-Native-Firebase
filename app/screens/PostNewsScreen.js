@@ -56,9 +56,9 @@ function PostNewsScreen(props) {
             <View style={{ marginTop: RFPercentage(3.5), width: '90%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                 {/* Back Icon */}
                 <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(1) }} >
-                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.8) }} color={Colors.white} />
+                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.5) }} color={Colors.white} />
                 </TouchableOpacity>
-                <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(2.9), color: Colors.white }}>
+                <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(2.6), color: Colors.white }}>
                     Post News
                 </Text>
             </View>
@@ -70,7 +70,7 @@ function PostNewsScreen(props) {
                         <View key={i} style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: RFPercentage(5), backgroundColor: Colors.white, width: '90%', height: i === 0 ? RFPercentage(19) : RFPercentage(24), borderRadius: RFPercentage(3) }} >
                             <View style={{ marginTop: RFPercentage(1), justifyContent: 'center', alignItems: 'center', width: '100%' }}>
                                 <View style={{ marginTop: RFPercentage(2) }} >
-                                    <Text style={{ marginBottom: RFPercentage(2), color: '#3E4462', fontSize: RFPercentage(3) }}>
+                                    <Text style={{ marginBottom: RFPercentage(2), color: '#3E4462', fontSize: RFPercentage(2.8) }}>
                                         {item.title}
                                     </Text>
                                     <InputField
@@ -80,7 +80,7 @@ function PostNewsScreen(props) {
                                         height={item.height}
                                         borderColor={Colors.inputFieldGrey}
                                         borderRadius={RFPercentage(1)}
-                                        fontSize={RFPercentage(2)}
+                                        fontSize={RFPercentage(1.9)}
                                         handleFeild={(text) => handleChange(text, i)}
                                         value={item.value}
                                         width={"95%"}

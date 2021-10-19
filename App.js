@@ -3,7 +3,6 @@ import { View, ActivityIndicator } from 'react-native'
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { RFPercentage } from 'react-native-responsive-fontsize';
-import Colors from './app/config/Colors';
 
 //Screens
 import WelcomeScreen from './app/screens/WelcomeScreen';
@@ -23,6 +22,9 @@ import AboutusScreen from './app/screens/AboutusScreen';
 import PostNewsScreen from './app/screens/PostNewsScreen';
 import ContactusScreen from './app/screens/ContactusScreen';
 import HousesellScreen from './app/screens/HousesellScreen';
+
+//config
+import Colors from './app/config/Colors';
 
 //custom fonts
 import { Inter_700Bold, Inter_500Medium, Inter_400Regular, useFonts } from "@expo-google-fonts/inter"
@@ -45,7 +47,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="HousesellScreen">
+      <Stack.Navigator headerMode="none" initialRouteName="AboutusScreen">
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="HousesellScreen" component={HousesellScreen} />
         <Stack.Screen name="ContactusScreen" component={ContactusScreen} />

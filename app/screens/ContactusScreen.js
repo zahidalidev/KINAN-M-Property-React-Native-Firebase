@@ -64,9 +64,9 @@ function ContactusScreen(props) {
             <View style={{ marginTop: RFPercentage(3.5), width: '90%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                 {/* Back Icon */}
                 <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(1) }} >
-                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.8) }} color={Colors.black} />
+                    <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.5) }} color={Colors.black} />
                 </TouchableOpacity>
-                <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(2.8), color: Colors.black }}>
+                <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(2.5), color: Colors.black }}>
                     Contact Us
                 </Text>
             </View>
@@ -76,7 +76,7 @@ function ContactusScreen(props) {
             <View style={{ marginTop: RFPercentage(5), justifyContent: 'center', alignItems: 'center', width: '100%' }}>
                 {inputField.map((item, i) => (
                     <View key={i} style={{ marginTop: RFPercentage(2) }} >
-                        <Text style={{ fontSize: RFPercentage(2.4), marginBottom: RFPercentage(1), color: '#858585', marginLeft: RFPercentage(1) }}>
+                        <Text style={{ fontSize: RFPercentage(2.2), marginBottom: RFPercentage(1), color: '#858585', marginLeft: RFPercentage(1) }}>
                             {item.title}
                         </Text>
                         <InputField
@@ -88,7 +88,7 @@ function ContactusScreen(props) {
                             placeholderColor={Colors.white}
                             borderColor={"#91949B"}
                             borderRadius={RFPercentage(2.4)}
-                            fontSize={RFPercentage(2.5)}
+                            fontSize={RFPercentage(2.2)}
                             handleFeild={(text) => handleChange(text, i)}
                             value={item.value}
                             width={"85%"}
@@ -100,9 +100,9 @@ function ContactusScreen(props) {
             {/* Mobile Details */}
             <View style={{ marginTop: RFPercentage(6), flexDirection: 'row', width: '80%', justifyContent: 'flex-start', alignItems: 'center' }}>
                 <TouchableOpacity>
-                    <Image style={{ width: RFPercentage(3.5), height: RFPercentage(3.5) }} source={require('../../assets/images/phone.png')} />
+                    <Image style={{ width: RFPercentage(3.2), height: RFPercentage(3.2) }} source={require('../../assets/images/phone.png')} />
                 </TouchableOpacity>
-                <Text style={{ marginLeft: RFPercentage(3), fontSize: RFPercentage(2.5), color: "#666666" }}>
+                <Text style={{ marginLeft: RFPercentage(3), fontSize: RFPercentage(2.2), color: "#666666" }}>
                     + 12328648493
                 </Text>
             </View>

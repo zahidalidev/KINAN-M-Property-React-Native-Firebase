@@ -33,7 +33,7 @@ function MyAppButton({
             <Text
                 style={{
                     fontFamily: fontFamily,
-                    fontSize: RFPercentage(2.5),
+                    fontSize: RFPercentage(2.2),
                     color: color,
                     fontWeight: bold ? "bold" : null,
                 }}
