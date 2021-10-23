@@ -1,18 +1,87 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, ScrollView, Image } from 'react-native'
+import React, { useState, useRef } from 'react';
+import { ImageBackground, Image, TouchableOpacity, View, Text, Modal, Dimensions, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { RFPercentage } from 'react-native-responsive-fontsize';
+
+import * as ImagePicker from 'expo-image-picker';
+import { Entypo } from "@expo/vector-icons";
 
 //components
 import Screen from './../components/Screen';
 import InputField from './../components/common/InputField';
 import MyAppButton from './../components/common/MyAppButton';
 import BottomTab from '../components/common/BottomTab';
+import ImageAddingComponent from '../components/common/ImageAddingComponent';
+
 
 //config
 import Colors from '../config/Colors';
 
+const { height } = Dimensions.get("window");
+
+
 function HousesellScreen(props) {
+
+
+
+    const [pickerModel, setPickerModel] = useState(false);
+    const [currentImageBox, setcurrentImageBox] = useState(null);
+
+    const [shelfMainPhoto, setshelfMainPhoto] = useState(false)
+    const [shelfPhotoGall1, setshelfPhotoGall1] = useState(false)
+    const [shelfPhotoGall2, setshelfPhotoGall2] = useState(false)
+    const [shelfPhotoGall3, setshelfPhotoGall3] = useState(false)
+
+
+
+
+    const uploadImages = async (imageSelecor) => {
+        try {
+            await ImagePicker.requestMediaLibraryPermissionsAsync();
+            await ImagePicker.requestCameraPermissionsAsync()
+            await ImagePicker.getCameraPermissionsAsync()
+            let permissionResult = await ImagePicker.getMediaLibraryPermissionsAsync();
+
+            if (permissionResult.granted === false) {
+                alert("Permission to access camera roll is required!");
+                return;
+            }
+            let pickerResult;
+            if (imageSelecor === "camera") {
+                pickerResult = await ImagePicker.launchCameraAsync();
+            }
+            else if (imageSelecor === "gallery") {
+                pickerResult = await ImagePicker.launchImageLibraryAsync();
+            }
+
+            if (currentImageBox === 1) {
+                setshelfMainPhoto(pickerResult)
+                setPickerModel(false)
+            }
+            else if (currentImageBox === 2) {
+                setshelfPhotoGall1(pickerResult)
+                setPickerModel(false)
+            }
+            else if (currentImageBox === 3) {
+                console.log("here")
+                setshelfPhotoGall2(pickerResult)
+                setPickerModel(false)
+            }
+            else if (currentImageBox === 4) {
+                setshelfPhotoGall3(pickerResult)
+                setPickerModel(false)
+            }
+
+        } catch (error) {
+
+        }
+    }
+
+
+
+
+
+
     const [inputField, SetInputField] = useState([
         {
             placeholder: "Home Address and Location",
@@ -94,14 +163,24 @@ function HousesellScreen(props) {
                         </View>
                     ))}
 
-                    {/* Image adding components */}
-                    <View style={{ flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', marginTop: RFPercentage(2.5), width: "90%", height: RFPercentage(20), backgroundColor: Colors.white, borderRadius: RFPercentage(3) }}>
-                        <View style={{ marginLeft: RFPercentage(2), justifyContent: 'center', alignItems: 'center', backgroundColor: Colors.white, width: RFPercentage(10), height: RFPercentage(15) }}>
-                            <TouchableOpacity style={{ justifyContent: 'center', alignItems: "center", width: RFPercentage(7), height: RFPercentage(7), borderRadius: RFPercentage(20), backgroundColor: "#E3E3E3" }}>
-                                <Image style={{ width: RFPercentage(3), height: RFPercentage(3) }} source={require('../../assets/images/pluss.png')} />
-                            </TouchableOpacity>
-                        </View>
-                    </View>
+                    {/* Image adding box */}
+                    <ImageAddingComponent
+                        onUploadImage1={() => {
+                            setcurrentImageBox(2)
+                            setPickerModel(true)
+                        }}
+                        onUploadImage2={() => {
+                            setcurrentImageBox(3)
+                            setPickerModel(true)
+                        }}
+                        onUploadImage3={() => {
+                            setcurrentImageBox(4)
+                            setPickerModel(true)
+                        }}
+                        shelfMainPhoto={shelfPhotoGall1}
+                        shelfPhotoGall2={shelfPhotoGall2}
+                        shelfPhotoGall3={shelfPhotoGall3}
+                        threeBoxes={true} />
 
                     {/* Bottom Button */}
                     <View style={{ width: '100%', marginTop: RFPercentage(10), marginBottom: RFPercentage(10) }}>
@@ -120,6 +199,28 @@ function HousesellScreen(props) {
 
             {/* Bottom tab */}
             <BottomTab props={props} />
+
+            {/* Model */}
+            <Modal visible={pickerModel} transparent={true} >
+                <View style={{ justifyContent: "flex-end", flex: 1, height: height, width: "100%", backgroundColor: "rgba(0, 0, 0, 0.6)" }} >
+                    <View style={{ alignItems: "center", borderTopLeftRadius: RFPercentage(3), borderTopRightRadius: RFPercentage(3), backgroundColor: Colors.white, width: "100%", height: RFPercentage(25) }} >
+                        <View style={{ width: "90%", marginTop: RFPercentage(1.5) }} >
+                            <TouchableOpacity onPress={() => setPickerModel(false)} >
+                                <Entypo size={RFPercentage(3)} name="cross" color={Colors.grey} />
+                            </TouchableOpacity>
+                            <Text style={{ marginTop: RFPercentage(1), marginLeft: RFPercentage(1), fontSize: RFPercentage(2), fontWeight: "bold" }} >Select Photo</Text>
+
+                            <TouchableOpacity onPress={() => uploadImages("camera")} style={{ backgroundColor: "#F7F7F7", marginTop: RFPercentage(1), borderRadius: RFPercentage(1), justifyContent: "center", width: "96%", marginLeft: "2%", height: RFPercentage(5.5), borderWidth: 1, borderColor: "#3A3384" }} >
+                                <Text style={{ marginLeft: RFPercentage(2), fontSize: RFPercentage(2.2) }} >Camera</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={() => uploadImages("gallery")} style={{ backgroundColor: "#F7F7F7", marginTop: RFPercentage(1), borderRadius: RFPercentage(1), justifyContent: "center", width: "96%", marginLeft: "2%", height: RFPercentage(5.5), borderWidth: 0, borderColor: "#3A3384" }} >
+                                <Text style={{ marginLeft: RFPercentage(2), fontSize: RFPercentage(2.2) }} >Photo Gallery</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                </View>
+            </Modal>
+
         </Screen>
     );
 }
