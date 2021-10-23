@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react';
-import { ImageBackground, Image, TouchableOpacity, View, Text, Modal, Dimensions, ScrollView, AppRegistry } from 'react-native';
+import { Image, TouchableOpacity, View, Text, Modal, Dimensions, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 import * as ImagePicker from 'expo-image-picker';
@@ -26,7 +26,7 @@ function HousesellScreen(props) {
     // for range value slider
     const [sliderValue, setSliderValue] = useState(15);
 
-    // picker
+    //for image picker
     const [selectedItem, setItem] = useState('')
 
     const items = [
@@ -185,6 +185,7 @@ function HousesellScreen(props) {
             </View>
 
             <ScrollView style={{ backgroundColor: Colors.secondary, flex: 1, width: '100%' }} >
+
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: RFPercentage(1) }}>
 
                     {/* White Boxes */}
@@ -261,6 +262,7 @@ function HousesellScreen(props) {
                     <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: RFPercentage(5), backgroundColor: Colors.white, width: '90%', height: RFPercentage(50), borderRadius: RFPercentage(3) }} >
 
                         <View style={{ marginLeft: RFPercentage(2), alignSelf: 'flex-start', marginTop: RFPercentage(1), justifyContent: 'flex-start', alignItems: 'flex-start', width: '100%' }}>
+
                             <View style={{ marginTop: RFPercentage(2) }} >
                                 <Text style={{ marginBottom: RFPercentage(2), color: '#3E4462', fontSize: RFPercentage(3) }}>
                                     Details
@@ -297,6 +299,7 @@ function HousesellScreen(props) {
                         </View>
 
                         <View style={{ marginLeft: RFPercentage(2), alignSelf: 'flex-start', marginTop: RFPercentage(1), justifyContent: 'flex-start', alignItems: 'flex-start', width: '100%' }}>
+
                             <View style={{ marginTop: RFPercentage(2) }} >
                                 <Text style={{ marginBottom: RFPercentage(2), color: '#3E4462', fontSize: RFPercentage(3) }}>
                                     Price
@@ -330,7 +333,6 @@ function HousesellScreen(props) {
                         />
                     </View>
                 </View>
-
             </ScrollView>
 
             {/* Bottom tab */}
@@ -342,6 +344,7 @@ function HousesellScreen(props) {
                 <View style={{ justifyContent: "flex-end", flex: 1, height: height, width: "100%", backgroundColor: "rgba(0, 0, 0, 0.6)" }} >
 
                     <View style={{ alignItems: "center", borderTopLeftRadius: RFPercentage(3), borderTopRightRadius: RFPercentage(3), backgroundColor: Colors.white, width: "100%", height: RFPercentage(25) }} >
+
                         <View style={{ width: "90%", marginTop: RFPercentage(1.5) }} >
                             <TouchableOpacity onPress={() => setPickerModel(false)} >
                                 <Entypo size={RFPercentage(3)} name="cross" color={Colors.grey} />
@@ -357,7 +360,6 @@ function HousesellScreen(props) {
                     </View>
                 </View>
             </Modal>
-
         </Screen>
     );
 }

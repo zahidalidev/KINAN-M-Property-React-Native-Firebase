@@ -29,6 +29,7 @@ import Colors from './app/config/Colors';
 //custom fonts
 import { Inter_700Bold, Inter_500Medium, Inter_400Regular, useFonts } from "@expo-google-fonts/inter"
 import { Montserrat_500Medium, Montserrat_600SemiBold } from "@expo-google-fonts/montserrat"
+import HouseDetailsScreen from './app/screens/HouseDetailsScreen';
 
 const Stack = createStackNavigator()
 
@@ -47,8 +48,9 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="HousesellScreen">
+      <Stack.Navigator headerMode="none" initialRouteName="HouseDetailsScreen">
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        <Stack.Screen name="HouseDetailsScreen" component={HouseDetailsScreen} />
         <Stack.Screen name="HousesellScreen" component={HousesellScreen} />
         <Stack.Screen name="ContactusScreen" component={ContactusScreen} />
         <Stack.Screen name="PostNewsScreen" component={PostNewsScreen} />
