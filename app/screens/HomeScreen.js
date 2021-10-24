@@ -72,8 +72,8 @@ function HomeScreen(props) {
                     </Text>
                 </View>
                 {/* Menue Icon */}
-                <TouchableOpacity style={{ position: 'absolute', right: RFPercentage(0) }}>
-                    <Image source={require('../../assets/images/menu.png')} />
+                <TouchableOpacity onPress={() => props.navigation.openDrawer()} style={{ position: 'absolute', right: RFPercentage(0) }}>
+                    <Image style={{ width: RFPercentage(3.5), height: RFPercentage(2) }} source={require('../../assets/images/hMenue.png')} />
                 </TouchableOpacity>
             </View>
 

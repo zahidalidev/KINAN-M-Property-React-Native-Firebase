@@ -57,7 +57,7 @@ function DiscoverScreen(props) {
                 </Text>
                 {/* Menue Icon */}
                 <TouchableOpacity style={{ position: 'absolute', right: RFPercentage(0) }}>
-                    <Image source={require('../../assets/images/menu.png')} />
+                    <Image style={{ width: RFPercentage(3.5), height: RFPercentage(2) }} source={require('../../assets/images/hMenue.png')} />
                 </TouchableOpacity>
             </View>
 

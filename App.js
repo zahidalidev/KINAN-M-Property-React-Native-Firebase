@@ -50,7 +50,7 @@ export default function App() {
 
 
   const HomeDrawer = () => {
-    return <Drawer.Navigator initialRouteName="HomeScreen" drawerType={"front"} overlayColor="transparent" edgeWidth={100} drawerStyle={{ backgroundColor: Colors.white, width: "75%" }} drawerContent={(props) => <AppDrawer {...props} />}  >
+    return <Drawer.Navigator screenOptions={{ headerShown: false, drawerPosition: 'right' }} initialRouteName="HomeScreen" drawerType={"front"} overlayColor="transparent" edgeWidth={100} drawerStyle={{ backgroundColor: Colors.white, width: "75%" }} drawerContent={(props) => <AppDrawer {...props} />}  >
       <Drawer.Screen name="HomeScreen" component={HomeScreen} />
       <Drawer.Screen name="SearchScreen" component={SearchScreen} />
       <Drawer.Screen name="DiscoverScreen" component={DiscoverScreen} />
