@@ -7,6 +7,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 //components
 import Screen from './../components/Screen';
+import MyAppButton from './../components/common/MyAppButton';
 
 //config
 import Colors from '../config/Colors';
@@ -27,6 +28,8 @@ function HouseDetailsScreen(props) {
             text: 'pellentesque varius massa nunc read more.'
         },
     ]
+
+
     return (
         <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: Colors.white }}>
 
@@ -51,7 +54,7 @@ function HouseDetailsScreen(props) {
 
                     {/* Top Image */}
                     <TouchableOpacity style={{ width: '100%', alignItems: 'center', justifyContent: 'center' }}>
-                        <Image style={{ width: '90%', height: RFPercentage(30), marginTop: RFPercentage(5) }} source={require('../../assets/images/houseshape.png')} />
+                        <Image style={{ width: '90%', height: RFPercentage(27.9), marginTop: RFPercentage(5) }} source={require('../../assets/images/houseshape.png')} />
                     </TouchableOpacity>
 
                     {/* Text Details */}
@@ -77,7 +80,7 @@ function HouseDetailsScreen(props) {
                     {/*details about post text */}
                     <View style={{ width: '90%', marginTop: RFPercentage(3) }}>
                         {textDetail.map((item, i) => (
-                            <Text key={i} style={{ marginTop: RFPercentage(1), color: Colors.black, fontSize: RFPercentage(2.1) }} >
+                            <Text key={i} style={{ marginTop: RFPercentage(0.5), color: Colors.black, fontSize: RFPercentage(2.1) }} >
                                 {item.text}
                             </Text>
                         ))}
@@ -86,7 +89,7 @@ function HouseDetailsScreen(props) {
                     {/* Location View */}
                     <View style={{ marginTop: RFPercentage(3), width: '90%', borderRadius: RFPercentage(6), flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
 
-                        <View style={{ flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', width: RFPercentage(35), height: RFPercentage(10), borderRadius: RFPercentage(10), backgroundColor: Colors.lightestBrownish }} >
+                        <View style={{ flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', width: RFPercentage(35), height: RFPercentage(9), borderRadius: RFPercentage(10), backgroundColor: Colors.lightestBrownish }} >
                             <TouchableOpacity>
                                 <Image style={{ marginLeft: RFPercentage(3), width: RFPercentage(3.2), height: RFPercentage(3.2) }} source={require('../../assets/images/map.png')} />
                             </TouchableOpacity>
@@ -105,15 +108,76 @@ function HouseDetailsScreen(props) {
                         </TouchableOpacity>
                     </View>
 
+                    {/* First Row */}
                     <View style={{ marginTop: RFPercentage(4), width: '90%', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }} >
-                        {/* left view */}
+                        {/* left Boxe */}
                         <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', backgroundColor: Colors.inputFieldGrey, width: '40%', height: RFPercentage(10), borderRadius: RFPercentage(2) }} >
-                            <Image style={{ width: RFPercentage(5), height: RFPercentage(5) }} source={require('../../assets/images/rec.png')} />
+                            <Image style={{ width: RFPercentage(3.5), height: RFPercentage(3.5) }} source={require('../../assets/images/rec.png')} />
+                            <View style={{ marginLeft: RFPercentage(2), justifyContent: 'flex-start', alignItems: 'flex-start' }}>
+                                <Text style={{ color: Colors.black, fontFamily: 'Inter_700Bold' }}>
+                                    Area
+                                </Text>
+                                <Text style={{ color: Colors.black, fontFamily: 'Inter_700Bold' }}>
+                                    1.604 sqft
+                                </Text>
+                            </View>
                         </View>
-                        {/* right view */}
+
+                        {/* right boxe */}
                         <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', backgroundColor: Colors.inputFieldGrey, width: '40%', height: RFPercentage(10), borderRadius: RFPercentage(2), position: 'absolute', right: RFPercentage(0) }} >
+                            <Image style={{ width: RFPercentage(4.6), height: RFPercentage(3.7) }} source={require('../../assets/images/car.png')} />
+                            <View style={{ marginLeft: RFPercentage(2), justifyContent: 'flex-start', alignItems: 'flex-start' }}>
+                                <Text style={{ color: Colors.black, fontFamily: 'Inter_700Bold' }}>
+                                    Parking
+                                </Text>
+                                <Text style={{ color: Colors.black, fontFamily: 'Inter_700Bold' }}>
+                                    1 Indoor
+                                </Text>
+                            </View>
                         </View>
                     </View>
+
+                    {/* Second Row */}
+                    <View style={{ marginTop: RFPercentage(4), width: '90%', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }} >
+                        {/* left Boxe */}
+                        <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', backgroundColor: Colors.inputFieldGrey, width: '40%', height: RFPercentage(10), borderRadius: RFPercentage(2) }} >
+                            <Image style={{ width: RFPercentage(3.5), height: RFPercentage(3.8) }} source={require('../../assets/images/bed.png')} />
+                            <View style={{ marginLeft: RFPercentage(2), justifyContent: 'flex-start', alignItems: 'flex-start' }}>
+                                <Text style={{ color: Colors.black, fontFamily: 'Inter_700Bold' }}>
+                                    Area
+                                </Text>
+                                <Text style={{ color: Colors.black, fontFamily: 'Inter_700Bold' }}>
+                                    1.604 sqft
+                                </Text>
+                            </View>
+                        </View>
+
+                        {/* right boxe */}
+                        <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', backgroundColor: Colors.inputFieldGrey, width: '40%', height: RFPercentage(10), borderRadius: RFPercentage(2), position: 'absolute', right: RFPercentage(0) }} >
+                            <Image style={{ width: RFPercentage(4.6), height: RFPercentage(3.7) }} source={require('../../assets/images/bath.png')} />
+                            <View style={{ marginLeft: RFPercentage(2), justifyContent: 'flex-start', alignItems: 'flex-start' }}>
+                                <Text style={{ color: Colors.black, fontFamily: 'Inter_700Bold' }}>
+                                    Parking
+                                </Text>
+                                <Text style={{ color: Colors.black, fontFamily: 'Inter_700Bold' }}>
+                                    1 Indoor
+                                </Text>
+                            </View>
+                        </View>
+                    </View>
+
+                    {/* Bottom Button */}
+                    <View style={{ width: '100%', marginTop: RFPercentage(10), marginBottom: RFPercentage(10) }}>
+                        <MyAppButton
+                            title="Contact Dealer"
+                            padding={RFPercentage(1.8)}
+                            bold={true}
+                            backgroundColor={Colors.lightestBrownish}
+                            color={Colors.white}
+                            width={"80%"}
+                        />
+                    </View>
+
                 </View>
             </ScrollView>
         </Screen>
