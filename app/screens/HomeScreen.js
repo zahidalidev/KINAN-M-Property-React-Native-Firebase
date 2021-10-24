@@ -5,11 +5,11 @@ import { Ionicons } from '@expo/vector-icons';
 
 //components
 import Screen from './../components/Screen';
+import InputField from './../components/common/InputField';
+import BottomTab from '../components/common/BottomTab';
+
 //config
 import Colors from '../config/Colors';
-import InputField from './../components/common/InputField';
-import { Inter_700Bold } from '@expo-google-fonts/inter';
-import BottomTab from '../components/common/BottomTab';
 
 function HomeScreen(props) {
 
@@ -85,6 +85,7 @@ function HomeScreen(props) {
                             placeholder={item.placeholder}
                             backgroundColor={Colors.white}
                             borderColor={"#E3E5E5"}
+                            onTouchStart={() => props.navigation.navigate("SearchScreen")}
                             borderWidth={0}
                             leftIconName={"search"}
                             borderRadius={RFPercentage(1)}
@@ -100,9 +101,9 @@ function HomeScreen(props) {
 
                 {/* Horizental scrolling cart */}
                 <ScrollView horizontal={true} style={{ marginTop: RFPercentage(3), width: '100%', backgroundColor: Colors.secondary }}>
-                    <View style={{ width: RFPercentage(200), flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
+                    <View style={{ width: "100%", flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
                         {cartData.map((item, i) => (
-                            <TouchableOpacity key={i} style={{ marginLeft: RFPercentage(2.5), borderRadius: RFPercentage(3), alignItems: 'flex-start', justifyContent: 'center', width: RFPercentage(30), height: RFPercentage(30) }}>
+                            <TouchableOpacity onPress={() => props.navigation.navigate("HouseDetailsScreen")} key={i} style={{ marginLeft: RFPercentage(2.5), borderRadius: RFPercentage(3), alignItems: 'flex-start', justifyContent: 'center', width: RFPercentage(30), height: RFPercentage(30) }}>
                                 <ImageBackground style={{ width: RFPercentage(30), height: RFPercentage(30), justifyContent: 'flex-start', alignItems: 'flex-start' }} source={require('../../assets/images/cart1.png')} >
                                     <View style={{ alignItems: 'center', flexDirection: 'row', marginLeft: RFPercentage(2), marginTop: RFPercentage(2) }}>
                                         <Ionicons name="eye-sharp" style={{ fontSize: RFPercentage(2.5) }} color={Colors.white} />
@@ -122,8 +123,8 @@ function HomeScreen(props) {
                     Latest News
                 </Text>
 
-                {/* Single cart */}
-                <View style={{ alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginTop: RFPercentage(3), alignSelf: 'center', width: '90%', backgroundColor: Colors.white, height: RFPercentage(13), borderRadius: RFPercentage(3) }}>
+                {/* Single white cart */}
+                <TouchableOpacity onPress={() => props.navigation.navigate("NewsScreen")} style={{ alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginTop: RFPercentage(3), alignSelf: 'center', width: '90%', backgroundColor: Colors.white, height: RFPercentage(13), borderRadius: RFPercentage(3) }}>
                     <TouchableOpacity>
                         <Image style={{ marginLeft: RFPercentage(3) }} source={require('../../assets/images/p2.png')} />
                     </TouchableOpacity>
@@ -134,7 +135,7 @@ function HomeScreen(props) {
                     <View style={{ alignItems: 'center', justifyContent: 'center', borderRadius: RFPercentage(10), marginLeft: RFPercentage(3), width: RFPercentage(3), height: RFPercentage(3), backgroundColor: "#939c84" }}>
                         <Text style={{ alignSelf: 'center', color: Colors.white, fontSize: RFPercentage(2) }} >6</Text>
                     </View>
-                </View>
+                </TouchableOpacity>
 
                 <Text style={{ fontSize: RFPercentage(2.5), marginLeft: RFPercentage(3.2), marginTop: RFPercentage(5), color: Colors.black, fontFamily: 'Inter_700Bold' }}>
                     Recommendation!

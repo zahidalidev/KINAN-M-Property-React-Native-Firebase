@@ -61,7 +61,7 @@ function PropertyHistoryScreen(props) {
             {/* Nav bar with heading */}
             <View style={{ marginTop: RFPercentage(3.5), width: '90%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                 {/* Back Icon */}
-                <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(1) }} >
+                <TouchableOpacity onPress={() => props.navigation.navigate("HomeHistoryScreen")} style={{ position: 'absolute', left: RFPercentage(1) }} >
                     <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.8) }} color={Colors.black} />
                 </TouchableOpacity>
                 <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(2.8), color: Colors.black }}>

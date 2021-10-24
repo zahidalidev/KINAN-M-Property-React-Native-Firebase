@@ -78,7 +78,7 @@ function LoginScreen2(props) {
                         title="Login"
                         padding={RFPercentage(1.6)}
                         bold={true}
-                        onPress={() => props.navigation.navigate("HomeScreen")}
+                        onPress={() => props.navigation.navigate("HomeDrawer")}
                         backgroundColor={Colors.white}
                         color={Colors.black}
                         width={"85%"}

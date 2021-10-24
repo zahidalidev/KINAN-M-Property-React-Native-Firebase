@@ -66,7 +66,7 @@ function SearchScreen(props) {
             {/* Nav Bar with menue */}
             <View style={{ marginTop: RFPercentage(3.5), width: '90%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                 {/* Back Icon */}
-                <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(1) }} >
+                <TouchableOpacity onPress={() => props.navigation.navigate("HomeScreen")} style={{ position: 'absolute', left: RFPercentage(1) }} >
                     <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.8) }} color={Colors.black} />
                 </TouchableOpacity>
                 <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(3), color: Colors.black }}>
@@ -110,7 +110,7 @@ function SearchScreen(props) {
                 {/* Horizental scrolling cart */}
                 <ScrollView horizontal={true} style={{ marginTop: RFPercentage(5), width: '100%', backgroundColor: "#E5E5E5" }}>
                     {/* Container */}
-                    <View style={{ width: RFPercentage(200), flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
+                    <View style={{ width: "100%", flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
                         {/* MiniContainer */}
                         {topCartData.map((item, i) => (
 
@@ -159,7 +159,7 @@ function SearchScreen(props) {
                 {/* bottom cart */}
                 {bottomCartData.map((item, i) => (
                     <View key={i} style={{ alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginTop: i === 0 ? RFPercentage(3) : RFPercentage(0), alignSelf: 'center', width: '90%', backgroundColor: "#E5E5E5", height: RFPercentage(15) }}>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => props.navigation.navigate("HouseDetailsScreen")}>
                             <Image style={{ width: RFPercentage(11.5), height: RFPercentage(11.5), marginLeft: RFPercentage(3) }} source={item.imageSource} />
                         </TouchableOpacity>
                         <View style={{ marginLeft: RFPercentage(2) }}>

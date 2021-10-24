@@ -9,7 +9,6 @@ import Screen from './../components/Screen';
 import Colors from './../config/Colors';
 import BottomTab from '../components/common/BottomTab';
 
-
 function NewsScreen(props) {
 
     const cartData = [
@@ -44,7 +43,7 @@ function NewsScreen(props) {
             {/* Nav */}
             <View style={{ marginTop: RFPercentage(3.5), width: '90%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                 {/* Back Icon */}
-                <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(1) }} >
+                <TouchableOpacity onPress={() => props.navigation.navigate("HomeScreen")} style={{ position: 'absolute', left: RFPercentage(1) }} >
                     <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.8) }} color={Colors.white} />
                 </TouchableOpacity>
                 <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(2.9), color: Colors.white }}>

@@ -36,7 +36,7 @@ function HouseDetailsScreen(props) {
             {/* Nav Bar with menue */}
             <View style={{ marginTop: RFPercentage(3.5), width: '90%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                 {/* Back Icon */}
-                <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(1) }} >
+                <TouchableOpacity onPress={() => props.navigation.navigate("HomeScreen")} style={{ position: 'absolute', left: RFPercentage(1) }} >
                     <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.8) }} color={Colors.black} />
                 </TouchableOpacity>
                 <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(2.7), color: Colors.black }}>
@@ -170,7 +170,8 @@ function HouseDetailsScreen(props) {
                     <View style={{ width: '100%', marginTop: RFPercentage(10), marginBottom: RFPercentage(10) }}>
                         <MyAppButton
                             title="Contact Dealer"
-                            padding={RFPercentage(1.8)}
+                            onPress={() => props.navigation.navigate("ContactusScreen")}
+                            padding={RFPercentage(2)}
                             bold={true}
                             backgroundColor={Colors.lightestBrownish}
                             color={Colors.white}

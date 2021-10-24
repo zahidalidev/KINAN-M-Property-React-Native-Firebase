@@ -49,7 +49,7 @@ function DiscoverScreen(props) {
             {/* Nav Bar with menue */}
             <View style={{ marginTop: RFPercentage(3.5), width: '90%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                 {/* Back Icon */}
-                <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(1) }} >
+                <TouchableOpacity onPress={() => props.navigation.navigate("HomeScreen")} style={{ position: 'absolute', left: RFPercentage(1) }} >
                     <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.8) }} color={Colors.black} />
                 </TouchableOpacity>
                 <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(2.7), color: Colors.black }}>
@@ -86,7 +86,9 @@ function DiscoverScreen(props) {
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: RFPercentage(1) }}>
                     {cartData.map((item, i) => (
                         <View key={i} style={{ justifyContent: 'flex-start', alignItems: 'center', marginTop: RFPercentage(3), width: '90%', height: RFPercentage(50), backgroundColor: Colors.white, borderRadius: RFPercentage(2) }}>
-                            <Image style={{ borderRadius: RFPercentage(2), width: '100%', height: RFPercentage(30) }} source={item.imageSource} />
+                            <TouchableOpacity onPress={() => props.navigation.navigate("HouseDetailsScreen")} style={{ width: '100%', alignItems: 'center', justifyContent: 'center' }}>
+                                <Image style={{ borderRadius: RFPercentage(2), width: '100%', height: RFPercentage(30) }} source={item.imageSource} />
+                            </TouchableOpacity>
                             <View style={{ marginTop: RFPercentage(3), width: '90%', flexDirection: 'row', alignSelf: 'center', alignItems: 'center', justifyContent: 'flex-start' }}>
                                 <Text style={{ fontFamily: 'Inter_700Bold', fontSize: RFPercentage(2.5) }}>
                                     White Smith Villa House

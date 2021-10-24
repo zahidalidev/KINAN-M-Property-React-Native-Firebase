@@ -63,7 +63,7 @@ function ContactusScreen(props) {
             {/* Nav bar with heading */}
             <View style={{ marginTop: RFPercentage(3.5), width: '90%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                 {/* Back Icon */}
-                <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(1) }} >
+                <TouchableOpacity onPress={() => props.navigation.navigate("HouseDetailsScreen")} style={{ position: 'absolute', left: RFPercentage(1) }} >
                     <Ionicons name="arrow-back-outline" style={{ fontSize: RFPercentage(3.5) }} color={Colors.black} />
                 </TouchableOpacity>
                 <Text style={{ fontFamily: 'Montserrat_500Medium', fontSize: RFPercentage(2.5), color: Colors.black }}>
@@ -111,7 +111,7 @@ function ContactusScreen(props) {
             <View style={{ width: '100%', position: 'absolute', bottom: RFPercentage(4) }}>
                 <MyAppButton
                     title="Contact Us"
-                    padding={RFPercentage(1.8)}
+                    padding={RFPercentage(2)}
                     bold={true}
                     // onPress={() => props.navigation.navigate("LoginScreen2")}
                     backgroundColor={Colors.lightestBrownish}

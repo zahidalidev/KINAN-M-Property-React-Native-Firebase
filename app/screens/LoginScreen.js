@@ -10,6 +10,7 @@ import MyAppButton from './../components/common/MyAppButton';
 
 //config
 import Colors from '../config/Colors';
+import LoginScreen2 from './LoginScreen2';
 
 function LoginScreen(props) {
 
@@ -87,7 +88,7 @@ function LoginScreen(props) {
                                 title={item.title}
                                 padding={RFPercentage(1.5)}
                                 bold={true}
-                                onPress={() => i === 0 ? props.navigation.navigate("SignupScreen") : null}
+                                onPress={() => [i === 0 ? props.navigation.navigate("SignupScreen") : null, i === 1 ? props.navigation.navigate("LoginScreen2") : null]}
                                 backgroundColor={item.backgroundColor}
                                 color={Colors.black}
                                 width={"85%"}
