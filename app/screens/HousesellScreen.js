@@ -179,8 +179,8 @@ function HousesellScreen(props) {
                     Sell House
                 </Text>
                 {/* Menue Icon */}
-                <TouchableOpacity style={{ position: 'absolute', right: RFPercentage(0) }}>
-                    <Image source={require('../../assets/images/menu.png')} />
+                <TouchableOpacity onPress={() => props.navigation.openDrawer()} style={{ position: 'absolute', right: RFPercentage(0) }}>
+                    <Image style={{ width: RFPercentage(4.2), height: RFPercentage(2.8) }} source={require('../../assets/images/menu.png')} />
                 </TouchableOpacity>
             </View>
 

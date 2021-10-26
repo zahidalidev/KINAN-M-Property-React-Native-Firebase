@@ -74,7 +74,7 @@ function PropertyHistoryScreen(props) {
                 <View style={{ marginBottom: RFPercentage(5), justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: RFPercentage(1) }}>
                     {cartData.map((item, i) => (
                         <View key={i} style={{ justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row', marginTop: i === 0 ? RFPercentage(4) : RFPercentage(1.5), width: '90%', height: RFPercentage(16), borderRadius: RFPercentage(3), backgroundColor: Colors.pink }}>
-                            <TouchableOpacity>
+                            <TouchableOpacity activeOpacity={0.8}>
                                 <Image style={{ marginLeft: RFPercentage(1) }} source={item.imageSource} />
                             </TouchableOpacity>
                             <View style={{ marginLeft: RFPercentage(2.5) }}>

@@ -17,6 +17,7 @@ function MyAppButton({
 }) {
     return (
         <TouchableOpacity
+            activeOpacity={0.8}
             onPress={onPress}
             style={{
                 backgroundColor: backgroundColor,

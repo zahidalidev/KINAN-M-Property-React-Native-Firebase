@@ -55,7 +55,7 @@ function HomeScreen(props) {
             {/* Nav Container */}
             <View style={{ marginLeft: RFPercentage(2), width: '90%', flexDirection: 'row', alignItems: 'center', marginTop: RFPercentage(2) }}>
                 {/* Profile Image */}
-                <TouchableOpacity >
+                <TouchableOpacity activeOpacity={0.8}>
                     <Image source={require('../../assets/images/avatar.png')} />
                 </TouchableOpacity>
                 <View style={{ marginLeft: RFPercentage(1.5) }}>
@@ -73,7 +73,7 @@ function HomeScreen(props) {
                 </View>
                 {/* Menue Icon */}
                 <TouchableOpacity onPress={() => props.navigation.openDrawer()} style={{ position: 'absolute', right: RFPercentage(0) }}>
-                    <Image style={{ width: RFPercentage(3.5), height: RFPercentage(2) }} source={require('../../assets/images/hMenue.png')} />
+                    <Image style={{ width: RFPercentage(4), height: RFPercentage(3) }} source={require('../../assets/images/hMenue.png')} />
                 </TouchableOpacity>
             </View>
 
@@ -103,7 +103,7 @@ function HomeScreen(props) {
                 <ScrollView horizontal={true} style={{ marginTop: RFPercentage(3), width: '100%', backgroundColor: Colors.secondary }}>
                     <View style={{ width: "100%", flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
                         {cartData.map((item, i) => (
-                            <TouchableOpacity onPress={() => props.navigation.navigate("HouseDetailsScreen")} key={i} style={{ marginLeft: RFPercentage(2.5), borderRadius: RFPercentage(3), alignItems: 'flex-start', justifyContent: 'center', width: RFPercentage(30), height: RFPercentage(30) }}>
+                            <TouchableOpacity activeOpacity={0.8} onPress={() => props.navigation.navigate("HouseDetailsScreen")} key={i} style={{ marginLeft: RFPercentage(2.5), borderRadius: RFPercentage(3), alignItems: 'flex-start', justifyContent: 'center', width: RFPercentage(30), height: RFPercentage(30) }}>
                                 <ImageBackground style={{ width: RFPercentage(30), height: RFPercentage(30), justifyContent: 'flex-start', alignItems: 'flex-start' }} source={require('../../assets/images/cart1.png')} >
                                     <View style={{ alignItems: 'center', flexDirection: 'row', marginLeft: RFPercentage(2), marginTop: RFPercentage(2) }}>
                                         <Ionicons name="eye-sharp" style={{ fontSize: RFPercentage(2.5) }} color={Colors.white} />
@@ -124,7 +124,7 @@ function HomeScreen(props) {
                 </Text>
 
                 {/* Single white cart */}
-                <TouchableOpacity onPress={() => props.navigation.navigate("NewsScreen")} style={{ alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginTop: RFPercentage(3), alignSelf: 'center', width: '90%', backgroundColor: Colors.white, height: RFPercentage(13), borderRadius: RFPercentage(3) }}>
+                <TouchableOpacity activeOpacity={0.8} onPress={() => props.navigation.navigate("NewsScreen")} style={{ alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginTop: RFPercentage(3), alignSelf: 'center', width: '90%', backgroundColor: Colors.white, height: RFPercentage(13), borderRadius: RFPercentage(3) }}>
                     <TouchableOpacity>
                         <Image style={{ marginLeft: RFPercentage(3) }} source={require('../../assets/images/p2.png')} />
                     </TouchableOpacity>
@@ -142,12 +142,8 @@ function HomeScreen(props) {
                 </Text>
                 {/* Destinations Pics */}
                 <View style={{ marginBottom: RFPercentage(10), marginLeft: RFPercentage(3), width: '90%', justifyContent: 'space-evenly', alignItems: 'center', marginTop: RFPercentage(3), flexDirection: 'row' }}>
-                    <TouchableOpacity>
-                        <Image source={require('../../assets/images/bottomCart1.png')} />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Image source={require('../../assets/images/bottomCart2.png')} />
-                    </TouchableOpacity>
+                    <Image source={require('../../assets/images/bottomCart1.png')} />
+                    <Image source={require('../../assets/images/bottomCart2.png')} />
                 </View>
             </ScrollView>
             {/* Bottom tab */}

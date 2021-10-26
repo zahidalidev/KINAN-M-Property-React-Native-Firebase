@@ -20,37 +20,37 @@ function AppDrawer({ navigation }) {
         {
             id: 2,
             label: "Publish Ad",
-            path: "HomeScreen"
+            path: "MyAddsScreen"
         },
         {
             id: 3,
             label: "History",
-            path: "HomeScreen"
+            path: "HomeHistoryScreen"
         },
         {
             id: 4,
             label: "Property Records",
-            path: "HomeScreen"
+            path: "PropertyHistoryScreen"
         },
         {
             id: 5,
             label: "Help/FAQ",
-            path: "HomeScreen"
+            path: "HelpScreen"
         },
         {
             id: 6,
             label: "About us",
-            path: "HomeScreen"
+            path: "AboutusScreen"
         },
         {
             id: 7,
             label: "Contact us",
-            path: "HomeScreen"
+            path: "ContactusScreen"
         },
         {
             id: 8,
             label: "News",
-            path: "HomeScreen"
+            path: "NewsScreen"
         },
     ]
 

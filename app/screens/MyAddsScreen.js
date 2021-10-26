@@ -54,7 +54,7 @@ function MyAddsScreen(props) {
                     {cartData.map((item, i) => (
 
                         <View key={i} style={{ alignItems: 'flex-start', justifyContent: 'flex-start', flexDirection: 'row', marginTop: RFPercentage(3), alignSelf: 'center', width: '90%', backgroundColor: Colors.toolightGrey, height: RFPercentage(29), borderRadius: RFPercentage(2) }}>
-                            <TouchableOpacity style={{ marginTop: RFPercentage(2.3) }}>
+                            <TouchableOpacity activeOpacity={0.8} style={{ marginTop: RFPercentage(2.3) }}>
                                 <Image style={{ marginLeft: RFPercentage(1) }} source={item.imageSource} />
                             </TouchableOpacity>
                             <View style={{ marginLeft: RFPercentage(1), marginTop: RFPercentage(2.8) }}>
