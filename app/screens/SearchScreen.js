@@ -73,8 +73,8 @@ function SearchScreen(props) {
                     Search
                 </Text>
                 {/* Menue Icon */}
-                <TouchableOpacity style={{ position: 'absolute', right: RFPercentage(0) }}>
-                    <Image style={{ width: RFPercentage(3.5), height: RFPercentage(2) }} source={require('../../assets/images/hMenue.png')} />
+                <TouchableOpacity onPress={() => props.navigation.openDrawer()} style={{ position: 'absolute', right: RFPercentage(0) }}>
+                    <Image style={{ width: RFPercentage(4), height: RFPercentage(3) }} source={require('../../assets/images/hMenue.png')} />
                 </TouchableOpacity>
             </View>
 
@@ -118,7 +118,7 @@ function SearchScreen(props) {
                                 {/* Top Image */}
                                 <Image style={{ borderRadius: RFPercentage(2), width: RFPercentage(33), height: RFPercentage(28), justifyContent: 'flex-start', alignItems: 'flex-start' }} source={item.imageSource} />
                                 {/* Heart Icon */}
-                                <TouchableOpacity style={{ position: 'absolute', top: RFPercentage(2), right: RFPercentage(2), justifyContent: 'center', alignItems: 'center', width: RFPercentage(4.5), height: RFPercentage(4.5), borderRadius: RFPercentage(20), backgroundColor: Colors.white }}>
+                                <TouchableOpacity activeOpacity={0.8} style={{ position: 'absolute', top: RFPercentage(2), right: RFPercentage(2), justifyContent: 'center', alignItems: 'center', width: RFPercentage(4.5), height: RFPercentage(4.5), borderRadius: RFPercentage(20), backgroundColor: Colors.white }}>
                                     <Image source={require('../../assets/images/heart2.png')} />
                                 </TouchableOpacity>
                                 {/* Descrription */}
@@ -159,12 +159,12 @@ function SearchScreen(props) {
                 {/* bottom cart */}
                 {bottomCartData.map((item, i) => (
                     <View key={i} style={{ alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginTop: i === 0 ? RFPercentage(3) : RFPercentage(0), alignSelf: 'center', width: '90%', backgroundColor: "#E5E5E5", height: RFPercentage(15) }}>
-                        <TouchableOpacity onPress={() => props.navigation.navigate("HouseDetailsScreen")}>
+                        <TouchableOpacity activeOpacity={0.8} onPress={() => props.navigation.navigate("HouseDetailsScreen")}>
                             <Image style={{ width: RFPercentage(11.5), height: RFPercentage(11.5), marginLeft: RFPercentage(3) }} source={item.imageSource} />
                         </TouchableOpacity>
                         <View style={{ marginLeft: RFPercentage(2) }}>
                             <View style={{ flexDirection: 'row', alignSelf: 'flex-start', alignItems: 'center', justifyContent: 'center' }}>
-                                <TouchableOpacity>
+                                <TouchableOpacity >
                                     <Image source={require('../../assets/images/location1.png')} />
                                 </TouchableOpacity>
                                 <Text style={{ marginLeft: RFPercentage(1), color: Colors.darkBlue, fontSize: RFPercentage(1.9) }}>

@@ -56,8 +56,8 @@ function DiscoverScreen(props) {
                     Discover
                 </Text>
                 {/* Menue Icon */}
-                <TouchableOpacity style={{ position: 'absolute', right: RFPercentage(0) }}>
-                    <Image style={{ width: RFPercentage(3.5), height: RFPercentage(2) }} source={require('../../assets/images/hMenue.png')} />
+                <TouchableOpacity onPress={() => props.navigation.openDrawer()} style={{ position: 'absolute', right: RFPercentage(0) }}>
+                    <Image style={{ width: RFPercentage(4), height: RFPercentage(3) }} source={require('../../assets/images/hMenue.png')} />
                 </TouchableOpacity>
             </View>
 
@@ -86,7 +86,7 @@ function DiscoverScreen(props) {
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: RFPercentage(1) }}>
                     {cartData.map((item, i) => (
                         <View key={i} style={{ justifyContent: 'flex-start', alignItems: 'center', marginTop: RFPercentage(3), width: '90%', height: RFPercentage(50), backgroundColor: Colors.white, borderRadius: RFPercentage(2) }}>
-                            <TouchableOpacity onPress={() => props.navigation.navigate("HouseDetailsScreen")} style={{ width: '100%', alignItems: 'center', justifyContent: 'center' }}>
+                            <TouchableOpacity activeOpacity={0.8} onPress={() => props.navigation.navigate("HouseDetailsScreen")} style={{ width: '100%', alignItems: 'center', justifyContent: 'center' }}>
                                 <Image style={{ borderRadius: RFPercentage(2), width: '100%', height: RFPercentage(30) }} source={item.imageSource} />
                             </TouchableOpacity>
                             <View style={{ marginTop: RFPercentage(3), width: '90%', flexDirection: 'row', alignSelf: 'center', alignItems: 'center', justifyContent: 'flex-start' }}>

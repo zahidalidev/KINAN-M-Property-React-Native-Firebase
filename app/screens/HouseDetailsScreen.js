@@ -43,8 +43,8 @@ function HouseDetailsScreen(props) {
                     House
                 </Text>
                 {/* Menue Icon */}
-                <TouchableOpacity style={{ position: 'absolute', right: RFPercentage(0) }}>
-                    <Image source={require('../../assets/images/menu.png')} />
+                <TouchableOpacity onPress={() => props.navigation.openDrawer()} style={{ position: 'absolute', right: RFPercentage(0) }}>
+                    <Image style={{ width: RFPercentage(4.2), height: RFPercentage(2.8) }} source={require('../../assets/images/menu.png')} />
                 </TouchableOpacity>
             </View>
 
@@ -53,7 +53,7 @@ function HouseDetailsScreen(props) {
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: RFPercentage(1) }}>
 
                     {/* Top Image */}
-                    <TouchableOpacity style={{ width: '100%', alignItems: 'center', justifyContent: 'center' }}>
+                    <TouchableOpacity activeOpacity={0.8} style={{ width: '100%', alignItems: 'center', justifyContent: 'center' }}>
                         <Image style={{ width: '90%', height: RFPercentage(27.9), marginTop: RFPercentage(5) }} source={require('../../assets/images/houseshape.png')} />
                     </TouchableOpacity>
 

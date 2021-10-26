@@ -16,7 +16,7 @@ function WelcomeScreen(props) {
                 <Text style={{ marginTop: RFPercentage(-2), fontFamily: "Inter_700Bold", color: '#444444', fontSize: RFPercentage(3.5), fontWeight: 'bold' }}>Let's find your</Text>
                 <Text style={{ marginTop: RFPercentage(0), fontFamily: "Inter_700Bold", color: '#444444', fontSize: RFPercentage(3.5), fontWeight: 'bold' }}>dream house</Text>
                 {/* Next Button */}
-                <TouchableOpacity onPress={() => props.navigation.navigate("LoginScreen")} style={{ alignItems: 'center', justifyContent: 'center', position: 'absolute', bottom: RFPercentage(15) }}>
+                <TouchableOpacity activeOpacity={0.8} onPress={() => props.navigation.navigate("LoginScreen")} style={{ alignItems: 'center', justifyContent: 'center', position: 'absolute', bottom: RFPercentage(15) }}>
                     <Image style={{ width: RFPercentage(8.6), height: RFPercentage(8.6) }} source={require('../../assets/images/next.png')} />
                 </TouchableOpacity>
             </ImageBackground>
