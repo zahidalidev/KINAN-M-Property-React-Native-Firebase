@@ -55,7 +55,7 @@ function AppDrawer({ navigation }) {
     ]
 
     return (
-        <View style={{ flex: 1, width: '100%' }}  >
+        <View style={{ flex: 1, width: '100%', position: 'absolute' }}  >
 
             <View style={{ alignSelf: 'center', justifyContent: 'center', marginTop: RFPercentage(10) }}>
                 <Image style={{ width: RFPercentage(9), height: RFPercentage(9) }} source={require('../../../assets/images/avatar2.png')} />
